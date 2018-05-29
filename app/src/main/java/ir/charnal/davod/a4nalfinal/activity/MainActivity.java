@@ -1,5 +1,6 @@
-package ir.charnal.davod.a4nalfinal;
+package ir.charnal.davod.a4nalfinal.activity;
 
+import android.annotation.SuppressLint;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGeneratorNotice;
+import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageNavigationView;
 
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     public static class TestFragment extends Fragment{
 
         @Nullable
@@ -73,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
             RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-            recyclerView.setAdapter(new TestAdapter());
+            recyclerView.setAdapter(new RecyclerViewNoticeAdapter(getContext(), DataFakeGeneratorNotice.getFakeData(getContext())));
             recyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(),DividerItemDecoration.VERTICAL));
         }
     }
