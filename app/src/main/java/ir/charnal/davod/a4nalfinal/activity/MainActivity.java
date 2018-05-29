@@ -1,13 +1,12 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
-import android.annotation.SuppressLint;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -16,12 +15,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGeneratorNotice;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
+import me.majiajie.pagerbottomtabstrip.MaterialMode;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageNavigationView;
+import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,13 +43,31 @@ public class MainActivity extends AppCompatActivity {
                 .addItem(R.drawable.vc_profile_black_24dp,"profile")
                 .addItem(R.drawable.vc_notice_black_24dp,"notice")
                 .addItem(R.drawable.vc_shop_black_24dp,"shop")
+                .setDefaultColor(0x89FFFFFF)
+                .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .build();
 
         ViewPager viewPager = findViewById(R.id.viewPager);
+
         viewPager.setAdapter(new TestViewPagerAdapter(getSupportFragmentManager()));
 
         mNavigationController.setupWithViewPager(viewPager);
+
+        mNavigationController.addTabItemSelectedListener(new OnTabItemSelectedListener() {
+            @Override
+            public void onSelected(int index, int old) {
+               Toast.makeText(MainActivity.this, "selected", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRepeat(int index) {
+                Toast.makeText(MainActivity.this, "repeated", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
+
 
     private class TestViewPagerAdapter extends FragmentPagerAdapter {
 
