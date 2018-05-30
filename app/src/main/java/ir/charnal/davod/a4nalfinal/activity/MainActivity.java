@@ -1,25 +1,17 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGeneratorNotice;
 import ir.charnal.davod.a4nalfinal.R;
-import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
+import ir.charnal.davod.a4nalfinal.adapter.ViewPagerAdapterMain;
 import me.majiajie.pagerbottomtabstrip.MaterialMode;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageNavigationView;
@@ -39,24 +31,26 @@ public class MainActivity extends AppCompatActivity {
 
         PageNavigationView pageBottomTabLayout = findViewById(R.id.tab);
 
+
         mNavigationController = pageBottomTabLayout.material()
-                .addItem(R.drawable.vc_profile_black_24dp,"profile")
-                .addItem(R.drawable.vc_notice_black_24dp,"notice")
                 .addItem(R.drawable.vc_shop_black_24dp,"shop")
+                .addItem(R.drawable.vc_notice_black_24dp,"notice")
+                .addItem(R.drawable.vc_profile_black_24dp,"profile")
                 .setDefaultColor(0x89FFFFFF)
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .build();
 
         ViewPager viewPager = findViewById(R.id.viewPager);
 
-        viewPager.setAdapter(new TestViewPagerAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(new ViewPagerAdapterMain(getSupportFragmentManager(),mNavigationController));
+
 
         mNavigationController.setupWithViewPager(viewPager);
 
         mNavigationController.addTabItemSelectedListener(new OnTabItemSelectedListener() {
             @Override
             public void onSelected(int index, int old) {
-               Toast.makeText(MainActivity.this, "selected", Toast.LENGTH_SHORT).show();
+               Toast.makeText(MainActivity.this, ""+mNavigationController.getSelected(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -69,39 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private class TestViewPagerAdapter extends FragmentPagerAdapter {
-
-        public TestViewPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return new TestFragment();
-        }
-
-        @Override
-        public int getCount() {
-            return mNavigationController.getItemCount();
-        }
-    }
-
-
-    public static class TestFragment extends Fragment{
-
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.recyclerview_main,container,false);
-        }
-
-        @Override
-        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-            RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-            recyclerView.setAdapter(new RecyclerViewNoticeAdapter(getContext(), DataFakeGeneratorNotice.getFakeData(getContext())));
-            recyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(),DividerItemDecoration.VERTICAL));
-        }
-    }
+// felan haminjuri bashe bi kar
 
     private static class TestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
@@ -129,4 +91,6 @@ public class MainActivity extends AppCompatActivity {
             return 100;
         }
     }
+
+
 }
