@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNotice;
+import ir.charnal.davod.a4nalfinal.datamodel.DataModelNoticeCategory;
 
 public class DataFakeGeneratorNotice {
 
@@ -22,6 +23,29 @@ public class DataFakeGeneratorNotice {
         }
 
         return models;
+
+    }
+//for notice category, but is not necessary now.
+    public static List<DataModelNoticeCategory> getCategoryNotice (Context context){
+        List<DataModelNoticeCategory> noticeCategoryModels = new ArrayList<>();
+        DataModelNoticeCategory dataModelNoticeCategory = new DataModelNoticeCategory();
+        for (int i = 0; i < 3; i++) {
+            switch (i) {
+                case 0:
+                    dataModelNoticeCategory.setNoticeCategory("کشش");
+                case 1:
+                    dataModelNoticeCategory.setNoticeCategory("لوازم سوارکار");
+                case 2:
+                    dataModelNoticeCategory.setNoticeCategory("لوازم اسب");
+                case 3:
+                    dataModelNoticeCategory.setNoticeCategory("اسب");
+            }
+
+                    noticeCategoryModels.add(dataModelNoticeCategory);
+
+        }
+
+        return noticeCategoryModels;
 
     }
 }

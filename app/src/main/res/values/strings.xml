@@ -3,4 +3,37 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_page">صفحه اصلی</string>
+    <string name="login">ورود یا ثبت نام</string>
+    <string name="category">دسته بندی محصولات</string>
+    <string name="shopping_cart">سبد خرید</string>
+    <string name="special_offer">پیشنهاد ویژه</string>
+    <string name="most_sales">پرفروش ترین ها</string>
+    <string name="most_seen">پربازدیدترین ها</string>
+    <string name="newests">جدیدترین ها</string>
+    <string name="setting">تنظیمات</string>
+    <string name="about_us">درباره چهار نعل</string>
+    <string name="search">جستجو</string>
+    <string name="navigation_header_login_register">ورود یا ثبت نام</string>
+    <string name="user_name_login_edit_text">شماره موبایل یا ایمیل</string>
+    <string name="user_name_login">نام کاربری</string>
+    <string name="password_login">کلمه عبور</string>
+    <string name="show_password">نمایش کلمه عبور</string>
+    <string name="forgot_password">کلمه عبور را فراموش کردم!</string>
+    <string name="register">ثبت نام</string>
+    <string name="sign_in">ورود</string>
+    <string name="see_full_list">مشاهده لیست کامل</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="login_activity_title">ورود و ثبت نام</string>
+    <string name="description_profile_layout">برای استفاده از تمامی امکانات 4 نعل، وارد حساب کاربری\u200cتان شوید.</string>
+    <string name="provision">قوانین</string>
+    <string name="usual_questions">سوالات متداول</string>
+    <string name="recent_seen">بازدیدهای اخیر</string>
+    <string name="bookmarked">نشان\u200cشده ها</string>
+    <string name="my_advertising">آگهی\u200cهای من</string>
+    <string name="filter">فیلتر</string>
+    <string name="newest_notices">جدیدترین آگهی\u200cها</string>
+    <string name="my_notices">آگهی\u200cهای من</string>
 </resources>
