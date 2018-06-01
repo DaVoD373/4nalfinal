@@ -13,11 +13,9 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
-import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGeneratorNotice;
+import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
-import ir.charnal.davod.a4nalfinal.activity.MainActivity;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 
 public class NoticeFragment extends Fragment {
@@ -25,13 +23,15 @@ public class NoticeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //this line is for change title name. probably necessary.
+//        ((MainActivity) getActivity()).setActionBarTitle("notice");
         return inflater.inflate(R.layout.layout_advertising, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         RecyclerView recyclerViewNoticeList = view.findViewById(R.id.recycler_view_newest_notices);
-        recyclerViewNoticeList.setAdapter(new RecyclerViewNoticeAdapter(getActivity(), DataFakeGeneratorNotice.getFakeData(getActivity())));
+        recyclerViewNoticeList.setAdapter(new RecyclerViewNoticeAdapter(getActivity(), DataFakeGenerator.getFakeData(getActivity())));
         recyclerViewNoticeList.addItemDecoration(new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
         //for notice category and show or hide the category buttons.

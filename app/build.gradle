@@ -32,4 +32,10 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.intuit.sdp:sdp-android:1.0.5'
     implementation 'com.intuit.ssp:ssp-android:1.0.5'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation "com.android.support:support-v4:27.1.1"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+
 }

@@ -7,10 +7,9 @@
     <string name="login">ورود یا ثبت نام</string>
     <string name="category">دسته بندی محصولات</string>
     <string name="shopping_cart">سبد خرید</string>
-    <string name="special_offer">پیشنهاد ویژه</string>
+    <string name="most_popular">محبوب\u200cترین\u200cها</string>
     <string name="most_sales">پرفروش ترین ها</string>
     <string name="most_seen">پربازدیدترین ها</string>
-    <string name="newests">جدیدترین ها</string>
     <string name="setting">تنظیمات</string>
     <string name="about_us">درباره چهار نعل</string>
     <string name="search">جستجو</string>
@@ -36,4 +35,5 @@
     <string name="filter">فیلتر</string>
     <string name="newest_notices">جدیدترین آگهی\u200cها</string>
     <string name="my_notices">آگهی\u200cهای من</string>
+    <string name="newest">جدیدترین‌ها</string>
 </resources>

@@ -3,13 +3,16 @@ package ir.charnal.davod.a4nalfinal.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v7.app.AppCompatActivity;
 
+import ir.charnal.davod.a4nalfinal.activity.MainActivity;
 import ir.charnal.davod.a4nalfinal.fragment.NoticeFragment;
 import ir.charnal.davod.a4nalfinal.fragment.ProfileFragment;
 import ir.charnal.davod.a4nalfinal.fragment.ShopFragment;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 
 public class ViewPagerAdapterMain extends FragmentPagerAdapter {
+
 
     private NavigationController mNavigationController;
 
@@ -23,6 +26,7 @@ public class ViewPagerAdapterMain extends FragmentPagerAdapter {
 
         switch (position){
             case 0:
+
                 return new ShopFragment();
             case 1:
                 return new NoticeFragment();
