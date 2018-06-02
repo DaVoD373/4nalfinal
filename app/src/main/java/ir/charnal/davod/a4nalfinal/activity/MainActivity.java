@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setNavigation();
+
 
         PageNavigationView pageBottomTabLayout = findViewById(R.id.tab);
 
@@ -68,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setNavigation() {
-
-    }
 
 
 // felan haminjuri bashe bi kar

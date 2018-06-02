@@ -3,161 +3,161 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/svg_background"
     android:layoutDirection="rtl"
     android:scaleX="1"
-    android:scaleY="1"
-    android:background="@drawable/svg_background"
-    >
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layoutDirection="rtl">
+    android:scaleY="1">
 
-    <android.support.v4.widget.NestedScrollView
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
 
-        <android.support.constraint.ConstraintLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/banner_slider_shop"
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp" />
+                android:layout_height="wrap_content">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_category_shop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layoutDirection="rtl"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/banner_slider_shop" />
+                <ImageView
+                    android:id="@+id/banner_slider_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/banner1"/>
 
-            <TextView
-                android:id="@+id/text_view_most_popular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:text="@string/most_popular"
-                android:textSize="@dimen/standard_text_size_x1.5"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_category_shop" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_category_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/banner_slider_shop" />
 
-            <Button
-                android:id="@+id/btn_see_full_list_most_popular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/standard_margin"
-                android:paddingRight="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:background="@android:color/transparent"
-                android:text="@string/see_full_list"
-                android:textColor="@color/text_see_list"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_category_shop" />
+                <TextView
+                    android:id="@+id/text_view_most_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:text="@string/most_popular"
+                    android:textSize="@dimen/standard_text_size_x1.5"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_category_shop" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_most_popular_shop_main_page"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layoutDirection="rtl"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_view_most_popular" />
+                <Button
+                    android:id="@+id/btn_see_full_list_most_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:text="@string/see_full_list"
+                    android:textColor="@color/text_see_list"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_category_shop" />
 
-            <ImageView
-                android:id="@+id/first_ad_store_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ad_store_banner_1"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_popular_shop_main_page" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_most_popular_shop_main_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_most_popular" />
 
-            <ImageView
-                android:id="@+id/second_ad_store_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ad_store_banner_2"
-                app:layout_constraintTop_toBottomOf="@+id/first_ad_store_banner" />
+                <ImageView
+                    android:id="@+id/first_ad_store_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ad_store_banner_1"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_popular_shop_main_page" />
 
-            <TextView
-                android:id="@+id/text_view_most_sales"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/most_sales"
-                android:textSize="@dimen/standard_text_size_x1.5"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_ad_store_banner" />
+                <ImageView
+                    android:id="@+id/second_ad_store_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ad_store_banner_2"
+                    app:layout_constraintTop_toBottomOf="@+id/first_ad_store_banner" />
 
-            <Button
-                android:id="@+id/btn_see_full_list_most_sales"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/standard_margin"
-                android:paddingRight="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/standard_margin_x5"
-                android:background="@android:color/transparent"
-                android:text="@string/see_full_list"
-                android:textColor="@color/text_see_list"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_ad_store_banner" />
+                <TextView
+                    android:id="@+id/text_view_most_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/most_sales"
+                    android:textSize="@dimen/standard_text_size_x1.5"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/second_ad_store_banner" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_most_sales_shop_main_page"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layoutDirection="rtl"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_view_most_sales" />
+                <Button
+                    android:id="@+id/btn_see_full_list_most_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_x5"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:text="@string/see_full_list"
+                    android:textColor="@color/text_see_list"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/second_ad_store_banner" />
 
-            <TextView
-                android:id="@+id/text_view_newest_products"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:paddingTop="@dimen/standard_margin_x4"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:text="@string/newest"
-                android:textSize="@dimen/standard_text_size_x1.5"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_sales_shop_main_page" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_most_sales_shop_main_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_most_sales" />
 
-            <Button
-                android:id="@+id/btn_see_full_list_newest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/standard_margin"
-                android:paddingRight="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/standard_margin_x5"
-                android:background="@android:color/transparent"
-                android:text="@string/see_full_list"
-                android:textColor="@color/text_see_list"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_sales_shop_main_page" />
+                <TextView
+                    android:id="@+id/text_view_newest_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_x4"
+                    android:text="@string/newest"
+                    android:textSize="@dimen/standard_text_size_x1.5"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_sales_shop_main_page" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_newest_products_shop_main_page"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/standard_margin"
-                android:layoutDirection="rtl"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_view_newest_products" />
+                <Button
+                    android:id="@+id/btn_see_full_list_newest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin_x5"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:text="@string/see_full_list"
+                    android:textColor="@color/text_see_list"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_sales_shop_main_page" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_newest_products_shop_main_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_newest_products" />
 
 
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
 
-
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v4.widget.NestedScrollView>
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </FrameLayout>
