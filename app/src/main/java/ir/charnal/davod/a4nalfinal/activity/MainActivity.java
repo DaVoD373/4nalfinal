@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     NavigationController mNavigationController;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,13 +31,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        setNavigation();
+
         PageNavigationView pageBottomTabLayout = findViewById(R.id.tab);
 
 
         mNavigationController = pageBottomTabLayout.material()
-                .addItem(R.drawable.vc_shop_black_24dp,"shop")
-                .addItem(R.drawable.vc_notice_black_24dp,"notice")
-                .addItem(R.drawable.vc_profile_black_24dp,"profile")
+                .addItem(R.drawable.vc_shop_black_24dp,"فروشگاه")
+                .addItem(R.drawable.vc_notice_black_24dp,"آگهی\u200cها")
+                .addItem(R.drawable.vc_profile_black_24dp,"پزوفایل")
                 .setDefaultColor(0x89FFFFFF)
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .build();
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         mNavigationController.setupWithViewPager(viewPager);
+
+
 
         mNavigationController.addTabItemSelectedListener(new OnTabItemSelectedListener() {
             @Override
@@ -59,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void setNavigation() {
 
     }
 
@@ -92,6 +102,11 @@ public class MainActivity extends AppCompatActivity {
             return 100;
         }
     }
+//this method must called for change title name
+//    public void setActionBarTitle(String title) {
+//        getSupportActionBar().setTitle(title);
+//    }
+
 
 
 }

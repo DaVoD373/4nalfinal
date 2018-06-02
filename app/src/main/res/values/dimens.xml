@@ -25,4 +25,5 @@
     <dimen name="standard_size_title">18sp</dimen>
     <dimen name="standard_size_content">16sp</dimen>
     <dimen name="standard_edit_text">32dp</dimen>
+    <dimen name="standard_margin_x5">40dp</dimen>
 </resources>
