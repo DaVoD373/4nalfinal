@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
 // felan haminjuri bashe bi kar
 
-    private static class TestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+    private static class TestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+    {
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

@@ -10,6 +10,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         android.defaultConfig.vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilter "armeabi-v7a"
+        }
     }
     buildTypes {
         release {
@@ -32,4 +35,5 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.intuit.sdp:sdp-android:1.0.5'
     implementation 'com.intuit.ssp:ssp-android:1.0.5'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.1'
 }

@@ -1,25 +1,16 @@
 package ir.charnal.davod.a4nalfinal.fragment;
 
-import android.app.SearchManager;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGeneratorNotice;
 import ir.charnal.davod.a4nalfinal.R;
-import ir.charnal.davod.a4nalfinal.activity.MainActivity;
-import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
+import ir.charnal.davod.a4nalfinal.activity.TestVideoActivity;
 
 public class ProfileFragment extends Fragment {
 
@@ -31,7 +22,17 @@ public class ProfileFragment extends Fragment {
     }
 
 
-
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        Button submit = view.findViewById(R.id.btn_submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TestVideoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
 
