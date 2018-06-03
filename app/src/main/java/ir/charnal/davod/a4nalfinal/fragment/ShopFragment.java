@@ -1,11 +1,16 @@
 package ir.charnal.davod.a4nalfinal.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -14,6 +19,7 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopMainPageAdapter;
 import ir.charnal.davod.a4nalfinal.adapter.ProductShopMainPageAdapter;
 
@@ -25,6 +31,31 @@ public class ShopFragment extends Fragment {
 
         return inflater.inflate(R.layout.layout_shop,container,false);
     }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_category_shop:
+                startActivity(new Intent(getActivity(), CategoryListShopActivity.class));
+        }
+        return true;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_shop, menu);
+
+
+        }
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

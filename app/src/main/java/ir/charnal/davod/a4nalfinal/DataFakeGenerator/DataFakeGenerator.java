@@ -6,6 +6,7 @@ import ir.charnal.davod.a4nalfinal.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopListFragments;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopMainPage;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNotice;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNoticeCategory;
@@ -177,5 +178,66 @@ public class DataFakeGenerator {
         return productsListShopMainPage;
     }
 
+    public static List<DataModelCategoryShopListFragments> getCategoryShopListData(Context context){
+        List<DataModelCategoryShopListFragments> categoryFragmentDataModelList = new ArrayList<>();
+        for (int i = 1; i <= 12; i++) {
+            DataModelCategoryShopListFragments categoryFragmentDataModel = new DataModelCategoryShopListFragments();
+            categoryFragmentDataModel.setId(i);
+            categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.mobile_category_list,null));
+            switch (i){
+                case 1:
+                    // categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.mobile_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("موبایل");
+                    break;
+                case 2:
+                    // categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.tablet_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("تبلت");
+                    break;
+                case 3:
+                    //  categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.laptop_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("لپ تاپ");
+                    break;
+                case 4:
+                    // categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.camera_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("دوربین");
+                    break;
+                case 5:
+                    // categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.computer_equipment_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("تجهیزات کامپیوتر");
+                    break;
+                case 6:
+                    // categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.sport_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("ورزشی");
+                    break;
+                case 7:
+                    //  categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.perfume_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("ادکلن");
+                    break;
+                case 8:
+                    //  categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.decoration_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("دکوراسیون");
+                    break;
+                case 9:
+//                    categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.bathroom_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("حمام");
+                    break;
+                case 10:
+                    // categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.washing_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("شستشو");
+                    break;
+                case 11:
+                    //  categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.light_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("نور و روشنایی");
+                    break;
+                case 12:
+                    //   categoryFragmentDataModel.setCategoryImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.food_category_list,null));
+                    categoryFragmentDataModel.setCategoryName("خوراکی");
+                    break;
+            }
+            categoryFragmentDataModelList.add(categoryFragmentDataModel);
+
+        }
+        return categoryFragmentDataModelList;
+    }
 
 }

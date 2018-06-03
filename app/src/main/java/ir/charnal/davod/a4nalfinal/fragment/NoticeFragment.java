@@ -68,14 +68,17 @@ public class NoticeFragment extends Fragment {
     @SuppressLint("RestrictedApi")
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_advertising, menu);
-        if (menu instanceof MenuBuilder) {
-            MenuBuilder m = (MenuBuilder) menu;
-            //noinspection RestrictedApit
-            m.setOptionalIconsVisible(true);
-        }
-
         super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.menu_advertising, menu);
+
+        //for visibility menu icons
+//        if (menu instanceof MenuBuilder) {
+//            MenuBuilder m = (MenuBuilder) menu;
+//            m.setOptionalIconsVisible(true);
+//        }
+
+
     }
 
     @Override
