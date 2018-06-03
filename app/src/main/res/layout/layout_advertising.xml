@@ -1,104 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_notice"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
     android:layoutDirection="rtl">
 
-    <Button
-        android:id="@+id/btn_notice_category"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="دسته بندی آگهی ها"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/category_item_background_notice_main_page"
-        android:text="اسب"
-        android:textColor="@color/white"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/button1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_notice"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+        </android.support.design.widget.AppBarLayout>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/category_item_background_notice_main_page"
-        android:text="لوازم اسب"
-        android:textColor="@color/white"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/category_item_background_notice_main_page"
-        android:text="کشش"
-        android:textColor="@color/white"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+            <Button
+                android:id="@+id/btn_notice_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="دسته بندی آگهی ها"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/category_item_background_notice_main_page"
-        android:text="لوازم سوارکار"
-        android:textColor="@color/white"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/category_item_background_notice_main_page"
+                android:text="اسب"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/button1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
 
-    <TextView
-        android:id="@+id/text_view_newest_notice"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/newest_notices"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/standard_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/category_item_background_notice_main_page"
+                android:text="لوازم اسب"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button"
+                app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/category_item_background_notice_main_page"
+                android:text="کشش"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button1"
+                app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/category_item_background_notice_main_page"
+                android:text="لوازم سوارکار"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/btn_notice_category" />
+
+            <TextView
+                android:id="@+id/text_view_newest_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/newest_notices"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/standard_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_newest_notices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_newest_notice" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_newest_notices"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_newest_notice" />
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view_main"
+        android:layoutDirection="rtl"
 
-</android.support.constraint.ConstraintLayout>
+        android:layout_gravity="start"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"/>
+
+</android.support.v4.widget.DrawerLayout>

@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +18,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        setupToolbar(view);
 
     }
 
@@ -29,7 +32,19 @@ public class ProfileFragment extends Fragment {
 
 
 
+    private void setupToolbar(View view) {
+       Toolbar toolbar = view.findViewById(R.id.toolbar_profile);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
+
+        ActionBar actionBar =((AppCompatActivity)getActivity()).getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+        }
+
+
+    }
 
 }
 //    @Override

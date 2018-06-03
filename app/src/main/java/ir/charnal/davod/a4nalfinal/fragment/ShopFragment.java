@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.view.menu.MenuBuilder;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,16 +18,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import java.util.ArrayList;
+import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopMainPageAdapter;
 import ir.charnal.davod.a4nalfinal.adapter.ProductShopMainPageAdapter;
+import ss.com.bannerslider.banners.Banner;
+import ss.com.bannerslider.banners.DrawableBanner;
+import ss.com.bannerslider.views.BannerSlider;
 
 public class ShopFragment extends Fragment {
+
+    private BannerSlider bannerSlider;
+    private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
 
     @Nullable
     @Override
@@ -36,6 +47,7 @@ public class ShopFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
 
     }
 
@@ -59,6 +71,16 @@ public class ShopFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        setupToolbar(view);
+
+        bannerSlider = view.findViewById(R.id.banner_slider_shop);
+        List<Banner> banners = new ArrayList<>();
+        banners.add(new DrawableBanner(R.drawable.banner1));
+        banners.add(new DrawableBanner(R.drawable.horse_sample_pic));
+        banners.add(new DrawableBanner(R.drawable.ad_store_banner_2));
+        bannerSlider.setBanners(banners);
+
         //recycler category names
         RecyclerView recyclerViewCategoryShopMainPage = view.findViewById(R.id.recycler_view_category_shop);
         CategoryShopMainPageAdapter categoryShopMainPageAdapter = new CategoryShopMainPageAdapter(getActivity(),DataFakeGenerator.getCategoryShopDataMainPage(getActivity()));
@@ -86,5 +108,22 @@ public class ShopFragment extends Fragment {
 
 //        recyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(),DividerItemDecoration.VERTICAL));
 
+    }
+
+    private void setupToolbar(View view) {
+        toolbar = view.findViewById(R.id.toolbar_shop);
+        drawerLayout = view.findViewById(R.id.drawer_shop);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+
+
+        ActionBar actionBar =((AppCompatActivity)getActivity()).getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+        }
+
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
     }
 }

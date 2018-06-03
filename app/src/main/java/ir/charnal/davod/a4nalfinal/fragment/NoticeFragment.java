@@ -4,9 +4,13 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.view.menu.MenuBuilder;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +23,9 @@ import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 
 public class NoticeFragment extends Fragment {
+
+    private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
 
     @Nullable
     @Override
@@ -34,8 +41,10 @@ public class NoticeFragment extends Fragment {
         recyclerViewNoticeList.setAdapter(new RecyclerViewNoticeAdapter(getActivity(), DataFakeGenerator.getFakeData(getActivity())));
         recyclerViewNoticeList.addItemDecoration(new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
+
         //for notice category and show or hide the category buttons.
         setupCategoryButton();
+        setupToolbar(view);
 
 
 
@@ -63,6 +72,23 @@ public class NoticeFragment extends Fragment {
                 }
             }
         });
+    }
+
+    private void setupToolbar(View view) {
+        toolbar = view.findViewById(R.id.toolbar_notice);
+        drawerLayout = view.findViewById(R.id.drawer_notice);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+
+
+        ActionBar actionBar =((AppCompatActivity)getActivity()).getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+        }
+
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
+        drawerLayout.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
     }
 
     @SuppressLint("RestrictedApi")

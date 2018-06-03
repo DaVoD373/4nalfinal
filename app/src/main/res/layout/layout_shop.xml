@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_shop"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/svg_background"
     android:layoutDirection="rtl"
-    android:scaleX="1"
-    android:scaleY="1">
+    >
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layoutDirection="rtl">
+        android:layout_height="match_parent">
+        <!--android:layoutDirection="rtl"-->
+
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_shop"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+        </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -21,12 +36,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
+                <ss.com.bannerslider.views.BannerSlider
                     android:id="@+id/banner_slider_shop"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    app:loopSlides="true"
+                    app:defaultIndicators="circle"
+                    app:interval="7000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/banner1"/>
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_category_shop"
@@ -159,5 +181,13 @@
             </android.support.constraint.ConstraintLayout>
         </android.support.v4.widget.NestedScrollView>
 
-    </android.support.constraint.ConstraintLayout>
-</FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view_main"
+        android:layoutDirection="rtl"
+
+        android:layout_gravity="start"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"/>
+</android.support.v4.widget.DrawerLayout>

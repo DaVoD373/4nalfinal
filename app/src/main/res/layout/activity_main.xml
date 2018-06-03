@@ -7,16 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"/>
-    </android.support.design.widget.AppBarLayout>
+
 
     <ir.charnal.davod.a4nalfinal.NoTouchViewPager
         android:id="@+id/viewPager"
