@@ -5,16 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/svg_background"
+    android:background="@color/background_main_page"
     android:layoutDirection="rtl"
     >
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <!--android:layoutDirection="rtl"-->
-
-        >
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
@@ -186,8 +183,9 @@
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view_main"
         android:layoutDirection="rtl"
-
+        app:menu="@menu/navigation_menu_shop"
+        app:headerLayout="@layout/layout_header_navigation"
         android:layout_gravity="start"
-        android:layout_width="300dp"
+        android:layout_width="240dp"
         android:layout_height="match_parent"/>
 </android.support.v4.widget.DrawerLayout>

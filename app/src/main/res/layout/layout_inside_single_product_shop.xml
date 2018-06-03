@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/text_view_single_product_name_shop"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="کیف پول و مدارک چرم طبیعی گلیما مدل کلا" />
+
+    <ImageView
+        android:id="@+id/image_view_compare_product_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_single_product_name_shop"
+        app:srcCompat="@drawable/ic_comparison" />
+
+    <TextView
+        android:id="@+id/text_view_comparison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginTop="8dp"
+        android:text="@string/comparison_product"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_compare_product_shop"
+        app:layout_constraintLeft_toRightOf="@+id/image_view_compare_product_shop"
+        app:layout_constraintTop_toTopOf="@+id/image_view_compare_product_shop" />
+
+    <ImageView
+        android:id="@+id/image_view_add_favorite_product_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_comparison"
+        app:layout_constraintLeft_toRightOf="@+id/text_view_comparison"
+        app:layout_constraintTop_toTopOf="@+id/text_view_comparison"
+        app:srcCompat="@drawable/ic_favorite" />
+
+    <View
+        android:id="@+id/line_below_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_single_product_name_shop"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_single_product_name_shop" />
+
+
+    <TextView
+        android:id="@+id/text_view_description_title_product_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/product_description"
+        android:textSize="@dimen/standard_text_size_x1.5"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_product_name" />
+
+    <TextView
+        android:id="@+id/text_view_description_product_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_description_title_product_shop"
+        android:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است." />
+
+    <android.support.v7.widget.CardView
+        android:paddingTop="@dimen/standard_margin"
+        android:paddingBottom="@dimen/standard_margin"
+        android:id="@+id/card_view_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="@dimen/standard_margin"
+        android:paddingRight="@dimen/standard_margin"
+        app:cardCornerRadius="@dimen/corner_card_view_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_description_product_shop">
+
+        <android.support.constraint.ConstraintLayout
+            android:paddingBottom="@dimen/standard_margin"
+            android:paddingTop="@dimen/standard_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_view_price_title_product_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/price"
+                android:textColor="@color/color_4nal"
+                android:textSize="@dimen/standard_text_size_x1.5"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_toman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:text="تومان"
+                android:textColor="@color/color_4nal"
+                android:textSize="@dimen/standard_text_size_x1.5"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_price_title_product_shop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_view_price_title_product_shop" />
+
+            <TextView
+                android:id="@+id/text_view_price_number_product_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_4nal"
+                android:textSize="@dimen/standard_text_size_x1.5"
+                app:layout_constraintBottom_toBottomOf="@+id/text_view_toman"
+                app:layout_constraintLeft_toRightOf="@+id/text_view_toman"
+                app:layout_constraintTop_toTopOf="@+id/text_view_toman"
+                tools:text="125000" />
+
+
+            <!--<include-->
+                <!--layout="@layout/layout_inside_add_to_shopping_cart"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/text_view_price_title_product_shop"-->
+                <!--tools:ignore="MissingConstraints"-->
+                <!--tools:layout_editor_absoluteX="8dp" />-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/card_view_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:layoutDirection="rtl"
+        android:background="@drawable/background_add_shopping_cart">
+
+        <TextView
+            android:id="@+id/text_view_add_shopping_cart"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/add_to_shopping_cart"
+            android:textSize="@dimen/standard_text_size_x1.5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_add_shopping_cart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_view_add_shopping_cart"
+            app:srcCompat="@drawable/ic_add_shopping_cart_white" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

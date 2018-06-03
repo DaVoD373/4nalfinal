@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/standard_margin_x4"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:paddingTop="@dimen/standard_margin_x4"
+        app:srcCompat="@drawable/navigation_header_4nal"
+        android:paddingRight="@dimen/standard_margin_x4"
+        android:paddingLeft="@dimen/standard_margin_x4"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -25,19 +25,6 @@
             app:showAsAction="always"/>
     </group>
 
-    <group>
-        <item
-            android:id="@+id/menu_most_sales"
-            android:title="@string/most_sales" />
-        <item
-            android:id="@+id/navigation_menu_most_seen"
-            android:title="@string/most_seen" />
-        <item
-            android:id="@+id/menu_newest"
-            android:title="@string/newest" />
-    </group>
-    <item
-        android:id="@+id/menu_about_us"
-        android:title="@string/about_us" />
+
 
 </menu>

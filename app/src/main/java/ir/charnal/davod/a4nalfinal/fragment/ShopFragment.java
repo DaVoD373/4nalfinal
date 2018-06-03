@@ -49,6 +49,7 @@ public class ShopFragment extends Fragment {
         setHasOptionsMenu(true);
 
 
+
     }
 
     @Override
@@ -64,8 +65,6 @@ public class ShopFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.menu_shop, menu);
-
-
         }
 
 

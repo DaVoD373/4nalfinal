@@ -50,7 +50,7 @@ public class ProfileFragment extends Fragment {
 //    @Override
 //    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 //        MenuInflater menuInflater = getMenuInflater();
-//        menuInflater.inflate(R.menu.menu_advertising, menu);
+//        menuInflater.inflate(R.menu.menu_notice, menu);
 //
 //        MenuItem searchItem = menu.findItem(R.id.search_toolbar_advertising);
 //

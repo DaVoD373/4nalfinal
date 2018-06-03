@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/my_notices_menu_item"
+            android:title="@string/my_notices"
+            android:icon="@drawable/ic_my_notices"
+            app:showAsAction="never"/>
+    </group>
+
+    <group android:id="@+id/menu_group_notice_layout">
+        <item
+            android:id="@+id/bookmarked_menu_item"
+            android:title="@string/bookmarked"
+            android:icon="@drawable/ic_bookmark"
+            app:showAsAction="never|withText"/>
+
+        <item
+            android:id="@+id/recent_seen_menu_item"
+            android:title="@string/recent_seen"
+            android:icon="@drawable/ic_recent_seen"
+            app:showAsAction="never"/>
+    </group>
+
+    <item
+        android:id="@+id/menu_about_us"
+        android:title="@string/about_us" />
+
+
+</menu>

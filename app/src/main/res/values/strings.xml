@@ -36,4 +36,9 @@
     <string name="newest_notices">جدیدترین آگهی\u200cها</string>
     <string name="my_notices">آگهی\u200cهای من</string>
     <string name="newest">جدیدترین‌ها</string>
+    <string name="favorites_list">لیست علافه\u200cمندی\u200cها</string>
+    <string name="comparison_product">مقایسه</string>
+    <string name="product_description">توضیحات کالا</string>
+    <string name="price">قیمت:</string>
+    <string name="add_to_shopping_cart">افزودن به سبد خرید</string>
 </resources>

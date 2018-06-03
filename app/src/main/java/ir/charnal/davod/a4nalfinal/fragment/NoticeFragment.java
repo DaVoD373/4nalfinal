@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,12 +15,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
+import ir.charnal.davod.a4nalfinal.activity.SingleProductInformationShopActivity;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 
 public class NoticeFragment extends Fragment {
@@ -32,7 +36,7 @@ public class NoticeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //this line is for change title name. probably necessary.
 //        ((MainActivity) getActivity()).setActionBarTitle("notice");
-        return inflater.inflate(R.layout.layout_advertising, container, false);
+        return inflater.inflate(R.layout.layout_notice, container, false);
     }
 
     @Override
@@ -96,7 +100,7 @@ public class NoticeFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
 
-        inflater.inflate(R.menu.menu_advertising, menu);
+        inflater.inflate(R.menu.menu_notice, menu);
 
         //for visibility menu icons
 //        if (menu instanceof MenuBuilder) {
@@ -105,6 +109,15 @@ public class NoticeFragment extends Fragment {
 //        }
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_category_shop:
+                startActivity(new Intent(getActivity(), SingleProductInformationShopActivity.class));
+        }
+        return true;
     }
 
     @Override
