@@ -1,8 +1,12 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.ViewPagerAdapterMain;
@@ -13,7 +17,9 @@ import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    NavigationController mNavigationController;
+    private NavigationController mNavigationController;
+    private DrawerLayout drawerLayout;
+    NavigationView navigationViewShop,navigationViewNotice;
 
 
     @Override
@@ -22,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        Toolbar toolbar = findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+        drawerLayout = findViewById(R.id.drawer_main);
+
+
+
+
+        ActionBar actionBar =getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
+        }
 
 
         PageNavigationView pageBottomTabLayout = findViewById(R.id.tab);
@@ -37,10 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = findViewById(R.id.viewPager);
 
-        viewPager.setAdapter(new ViewPagerAdapterMain(getSupportFragmentManager(),mNavigationController));
+        viewPager.setAdapter(new ViewPagerAdapterMain(getSupportFragmentManager(),mNavigationController,toolbar,drawerLayout));
 
 
-        mNavigationController.setupWithViewPager(viewPager);
+                mNavigationController.setupWithViewPager(viewPager);
+
+
 
 
 

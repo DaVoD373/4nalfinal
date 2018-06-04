@@ -1,13 +1,12 @@
 package ir.charnal.davod.a4nalfinal.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -36,18 +35,30 @@ public class ShopFragment extends Fragment {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
 
+
+    @SuppressLint("ValidFragment")
+    public ShopFragment(Toolbar toolbar, DrawerLayout drawerLayout) {
+        this.toolbar = toolbar;
+        this.drawerLayout = drawerLayout;
+
+    }
+
+    public ShopFragment() {
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.layout_shop,container,false);
+        View view = inflater.inflate(R.layout.layout_shop,container,false);
+      //  setupToolbar(view);
+        return view;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-
+        setupToolbar();
 
 
     }
@@ -71,7 +82,6 @@ public class ShopFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        setupToolbar(view);
 
         bannerSlider = view.findViewById(R.id.banner_slider_shop);
         List<Banner> banners = new ArrayList<>();
@@ -109,20 +119,15 @@ public class ShopFragment extends Fragment {
 
     }
 
-    private void setupToolbar(View view) {
-        toolbar = view.findViewById(R.id.toolbar_shop);
-        drawerLayout = view.findViewById(R.id.drawer_shop);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
+    private void setupToolbar() {
 
-        ActionBar actionBar =((AppCompatActivity)getActivity()).getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeButtonEnabled(true);
-        }
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
+
+
+
     }
 }

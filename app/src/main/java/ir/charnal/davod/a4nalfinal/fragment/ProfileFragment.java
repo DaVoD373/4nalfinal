@@ -1,5 +1,6 @@
 package ir.charnal.davod.a4nalfinal.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,17 +16,30 @@ import ir.charnal.davod.a4nalfinal.R;
 
 public class ProfileFragment extends Fragment {
 
+    private Toolbar toolbar;
+
+    public ProfileFragment() {
+    }
+
+    @SuppressLint("ValidFragment")
+    public ProfileFragment(Toolbar toolbar) {
+        this.toolbar = toolbar;
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setupToolbar(view);
+
 
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.layout_profile, container, false);
+        View view = inflater.inflate(R.layout.layout_profile, container, false);
+
+      //  setupToolbar(view);
+        return view;
     }
 
 
@@ -33,8 +47,6 @@ public class ProfileFragment extends Fragment {
 
 
     private void setupToolbar(View view) {
-       Toolbar toolbar = view.findViewById(R.id.toolbar_profile);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
 
         ActionBar actionBar =((AppCompatActivity)getActivity()).getSupportActionBar();

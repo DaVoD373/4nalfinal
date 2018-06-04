@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -22,7 +20,6 @@ import android.widget.Button;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
-import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.activity.SingleProductInformationShopActivity;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 
@@ -31,12 +28,23 @@ public class NoticeFragment extends Fragment {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
 
+
+    public NoticeFragment() {
+    }
+
+    @SuppressLint("ValidFragment")
+    public NoticeFragment(Toolbar toolbar, DrawerLayout drawerLayout) {
+        this.toolbar = toolbar;
+        this.drawerLayout = drawerLayout;
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //this line is for change title name. probably necessary.
-//        ((MainActivity) getActivity()).setActionBarTitle("notice");
-        return inflater.inflate(R.layout.layout_notice, container, false);
+        View view = inflater.inflate(R.layout.layout_notice, container, false);
+
+        return view;
     }
 
     @Override
@@ -48,7 +56,7 @@ public class NoticeFragment extends Fragment {
 
         //for notice category and show or hide the category buttons.
         setupCategoryButton();
-        setupToolbar(view);
+      //  setupToolbar(view);
 
 
 
@@ -78,21 +86,15 @@ public class NoticeFragment extends Fragment {
         });
     }
 
-    private void setupToolbar(View view) {
-        toolbar = view.findViewById(R.id.toolbar_notice);
-        drawerLayout = view.findViewById(R.id.drawer_notice);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
-
-        ActionBar actionBar =((AppCompatActivity)getActivity()).getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeButtonEnabled(true);
-        }
+    private void setupToolbar() {
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
+
+
+
     }
 
     @SuppressLint("RestrictedApi")
@@ -124,6 +126,7 @@ public class NoticeFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        setupToolbar();
     }
 
 
