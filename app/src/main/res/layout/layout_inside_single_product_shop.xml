@@ -215,7 +215,7 @@
             android:layout_height="290dp"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:background="@android:color/darker_gray"
+            android:background="@color/color_4nal"
             app:layout_constraintTop_toBottomOf="@+id/line_below_specification_product_title"
             />
 
@@ -224,7 +224,7 @@
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
         <!--first line-->
 
@@ -259,7 +259,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_product_number_stock"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
 
 
@@ -296,7 +296,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_product_stock_status"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
         <!--third line-->
 
@@ -331,7 +331,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_product_brand"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
         <!--4th line-->
 
@@ -366,7 +366,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_weight"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
         <!--5th line-->
 
@@ -401,7 +401,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_dimension"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
         <!--6th line-->
 
@@ -436,7 +436,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_color"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
         <!--7th line-->
 
@@ -471,7 +471,7 @@
             android:layout_height="@dimen/horizontal_line_specification"
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_size"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@color/color_4nal"/>
 
 
 

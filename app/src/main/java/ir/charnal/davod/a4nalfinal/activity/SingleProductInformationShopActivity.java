@@ -9,6 +9,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.HorizontalScrollView;
 
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopListViewPagerAdapter;
@@ -34,6 +37,7 @@ public class SingleProductInformationShopActivity extends AppCompatActivity {
         collapsingToolbarLayout.setTitle("کیف پول و مدارک چرم طبیعی گلیما مدل کلا");
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
         collapsingToolbarLayout.setExpandedTitleColor(Color.TRANSPARENT);
+
 
 
 
