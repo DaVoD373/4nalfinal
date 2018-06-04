@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <View
+        android:id="@+id/line_vertical"
+        android:layout_width="1dp"
+        android:layout_height="290dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_specification_product_title"
+        />
+
+    <View
+        android:id="@+id/line_below_specification_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!--first line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_stock_status"
+        android:text="@string/stock_status"
+        android:textSize="@dimen/standard_text_size"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_specification_product_title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_product_number_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="موجود"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toTopOf="@+id/line_vertical" />
+
+
+
+    <View
+        android:id="@+id/line_below_stock_status"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_product_number_stock"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+
+
+    <!--second line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_number_stock"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:text="@string/stock"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_stock_status" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_product_stock_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="100"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_stock_status" />
+
+
+
+    <View
+        android:id="@+id/line_below_number_stock"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_product_stock_status"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!--third line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_brand"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:text="@string/brand"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_number_stock" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_product_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="شوکوموله"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_number_stock" />
+
+
+
+    <View
+        android:id="@+id/line_below_brand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_product_brand"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!--4th line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_weight"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:text="@string/weight"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_brand" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="500 گرم"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_brand" />
+
+
+
+    <View
+        android:id="@+id/line_below_weight"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_weight"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!--5th line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_dimension"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:text="@string/dimension"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_weight" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_dimension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="50 * 10 * 150"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_weight" />
+
+
+
+    <View
+        android:id="@+id/line_below_dimension"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_dimension"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!--6th line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_color"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:text="@string/color"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_dimension" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="مشکی"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_dimension" />
+
+
+
+    <View
+        android:id="@+id/line_below_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_color"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!--7th line-->
+
+    <TextView
+        android:id="@+id/text_view_specification_product_size"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:text="@string/size"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_color" />
+
+    <TextView
+        android:id="@+id/text_view_second_column_specification_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="32"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintRight_toLeftOf="@+id/line_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/line_below_color" />
+
+
+
+    <View
+        android:id="@+id/line_below_size"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_specification"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_size"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"/>
+
+
+
+</android.support.constraint.ConstraintLayout>
