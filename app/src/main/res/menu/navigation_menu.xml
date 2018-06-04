@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/menu_group_shop_layout">
+        <item
+            android:id="@+id/menu_most_sales"
+            android:title="@string/most_sales"
+            android:icon="@drawable/ic_most_sales"/>
+        <item
+            android:id="@+id/navigation_menu_most_seen"
+            android:title="@string/most_seen"
+            android:icon="@drawable/ic_most_seen"/>
+        <item
+            android:id="@+id/menu_newest"
+            android:title="@string/newest"
+            android:icon="@drawable/ic_newest"/>
+        <item
+            android:id="@+id/navigation_menu_show_favorites_list_shop"
+            android:title="@string/favorites_list"
+            android:icon="@drawable/ic_favorite"/>
+        <item
+            android:id="@+id/shopping_bag"
+            android:title="@string/shopping_bag"
+            android:icon="@drawable/vc_shop_black_24dp"/>
+    </group>
+
+    <group android:id="@+id/menu_group_2_shop_layout" >
+        <item
+            android:id="@+id/my_notices_menu_item"
+            android:title="@string/my_notices"
+            android:icon="@drawable/ic_my_notices"
+            app:showAsAction="never"/>
+
+
+        <item
+            android:id="@+id/bookmarked_menu_item"
+            android:title="@string/bookmarked"
+            android:icon="@drawable/ic_bookmark"
+            app:showAsAction="never|withText"/>
+
+        <item
+            android:id="@+id/recent_seen_menu_item"
+            android:title="@string/recent_seen"
+            android:icon="@drawable/ic_recent_seen"
+            app:showAsAction="never"/>
+
+    </group>
+
+    <group android:id="@id/menu_about_us">
+        <item
+            android:id="@+id/menu_about_us"
+            android:title="@string/about_us" />
+
+    </group>
+
+
+</menu>

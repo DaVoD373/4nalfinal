@@ -41,4 +41,5 @@
     <string name="product_description">توضیحات کالا</string>
     <string name="price">قیمت:</string>
     <string name="add_to_shopping_cart">افزودن به سبد خرید</string>
+    <string name="shopping_bag">سبد خرید</string>
 </resources>

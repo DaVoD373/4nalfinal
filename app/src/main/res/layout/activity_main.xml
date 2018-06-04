@@ -49,7 +49,7 @@
         android:id="@+id/navigation_view_main_shop"
         android:layoutDirection="rtl"
         app:headerLayout="@layout/layout_header_navigation"
-        app:menu="@menu/navigation_menu_notice"
+        app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
         android:layout_width="240dp"
         android:layout_height="match_parent"/>
