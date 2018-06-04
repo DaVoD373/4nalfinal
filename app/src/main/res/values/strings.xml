@@ -49,4 +49,12 @@
     <string name="color">رنگ</string>
     <string name="size">اندازه</string>
     <string name="brand">برند</string>
+    <string name="notice_information">اطلاعات آگهی</string>
+    <string name="group">گروه</string>
+    <string name="location">محل</string>
+    <string name="province">استان</string>
+    <string name="call_information">اطلاعات تماس</string>
+    <string name="last_name">نام خانوادگی:</string>
+    <string name="phone_number">شماره تماس:</string>
+    <string name="email">ایمیل:</string>
 </resources>

@@ -4,20 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
     android:layoutDirection="rtl"
-    tools:context=".activity.SingleProductInformationShopActivity">
-
+    tools:context=".activity.SingleNoticeInformationActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar_product_information_shop"
+        android:id="@+id/app_bar_single_notice_information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
         android:layoutDirection="rtl">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar_single_product_shop_information"
+            android:id="@+id/collapsing_toolbar_single_notice_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
@@ -29,7 +27,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/horse_sample_pic" />
+                android:src="@drawable/ad_store_banner_2" />
 
             <!--<ss.com.bannerslider.views.BannerSlider-->
             <!--android:id="@+id/banner_slider_single_product_shop"-->
@@ -45,7 +43,7 @@
 
             <android.support.v7.widget.Toolbar
 
-                android:id="@+id/toolbar_single_product_shop"
+                android:id="@+id/toolbar_single_notice_information"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:gravity="right"
@@ -66,8 +64,9 @@
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <include layout="@layout/layout_inside_single_product_shop" />
+        <include layout="@layout/layout_inside_single_notice_information" />
 
     </android.support.v4.widget.NestedScrollView>
+
 
 </android.support.design.widget.CoordinatorLayout>

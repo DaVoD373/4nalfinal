@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -18,16 +19,19 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
+import ir.charnal.davod.a4nalfinal.activity.SingleNoticeInformationActivity;
 import ir.charnal.davod.a4nalfinal.activity.SingleProductInformationShopActivity;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 
 public class NoticeFragment extends Fragment {
-
+    private FloatingActionButton fab;
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
 
@@ -49,6 +53,8 @@ public class NoticeFragment extends Fragment {
         //for notice category and show or hide the category buttons.
         setupCategoryButton();
         setupToolbar(view);
+        setupFloatActionButton(view);
+
 
 
 
@@ -116,7 +122,10 @@ public class NoticeFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.menu_category_shop:
                 startActivity(new Intent(getActivity(), SingleProductInformationShopActivity.class));
+            case R.id.menu_shopping_cart  :
+                startActivity(new Intent(getActivity(), SingleNoticeInformationActivity.class));
         }
+
         return true;
     }
 
@@ -124,7 +133,19 @@ public class NoticeFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
+
     }
 
+        private void setupFloatActionButton(View view) {
 
+
+        fab = view.findViewById(R.id.fab_add_notice);
+            final android.view.animation.ScaleAnimation scaleAnimation = new ScaleAnimation
+                    (1.0f, 0.5f, 1.0f, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+            scaleAnimation.setDuration(250);
+            scaleAnimation.setRepeatCount(1);
+            scaleAnimation.setRepeatMode(Animation.REVERSE);
+
+        }
 }
