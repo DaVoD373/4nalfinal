@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.SingleProductInformationShopActivity;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelProductShopMainPage;
 
 /**
@@ -41,6 +43,14 @@ public class ProductShopMainPageAdapter extends RecyclerView.Adapter<ProductShop
         holder.productPicShopMainPage.setImageDrawable(productShopMainPage.getProductImage());
         holder.productContentShopMainPage.setText(productShopMainPage.getContent());
         holder.productPriceShopMainPage.setText(productShopMainPage.getPrice());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, SingleProductInformationShopActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
