@@ -41,5 +41,12 @@
     <string name="product_description">توضیحات کالا</string>
     <string name="price">قیمت:</string>
     <string name="add_to_shopping_cart">افزودن به سبد خرید</string>
-    <string name="shopping_bag">سبد خرید</string>
+    <string name="product_specification">مشخصات کامل کالا</string>
+    <string name="stock_status">وضعیت موجودی</string>
+    <string name="stock">موجودی</string>
+    <string name="weight">وزن</string>
+    <string name="dimension">ابعاد</string>
+    <string name="color">رنگ</string>
+    <string name="size">اندازه</string>
+    <string name="brand">برند</string>
 </resources>
