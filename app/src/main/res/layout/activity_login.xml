@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:animateLayoutChanges="true"
+    tools:context=".activity.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_login"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:title="@string/login_activity_title" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/layout_register"/>
+
+    <!--forgot-->
+
+    <EditText
+        android:id="@+id/edit_text_user_name_forgot"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="105dp"
+        android:background="@drawable/login_form_frame"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="@string/user_name_login"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:padding="@dimen/standard_margin" />
+
+    <TextView
+        android:id="@+id/text_view_for_btn_forgot"
+        app:layout_constraintTop_toTopOf="@id/edit_text_user_name_login"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_submit_forgot"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin_x2"
+        android:layout_marginRight="@dimen/form_margin_x2"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_for_btn_forgot"
+        android:layout_marginTop="126dp"
+        android:background="@drawable/login_button_form_frame"
+        android:text="@string/submit"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/standard_text_size_x1.5" />
+
+
+    <!--login-->
+
+    <TextView
+                android:id="@+id/text_view_user_name_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/app_bar_login"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/user_name_login"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/standard_text_size" />
+
+            <EditText
+                android:id="@+id/edit_text_user_name_login"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_user_name_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/form_margin"
+                android:layout_marginRight="@dimen/form_margin"
+                android:layout_marginTop="@dimen/standard_margin_x2"
+                android:background="@drawable/login_form_frame"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="@string/user_name_login_edit_text"
+                android:inputType="text"
+                android:padding="@dimen/standard_margin" />
+
+            <TextView
+                android:id="@+id/text_view_password_login"
+                android:layout_width="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginTop="161dp"
+                android:text="@string/password_login"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/standard_text_size" />
+
+            <EditText
+                android:id="@+id/edit_text_password_login"
+                android:layout_width="match_parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_password_login"
+                android:layout_marginLeft="@dimen/form_margin"
+                android:layout_marginRight="@dimen/form_margin"
+                android:layout_marginTop="@dimen/standard_margin_x2"
+                android:background="@drawable/login_form_frame"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="@string/password_login"
+                android:inputType="textPassword"
+                android:padding="@dimen/standard_margin" />
+
+
+            <CheckBox
+                android:id="@+id/check_box_show_password_login"
+                android:layout_width="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="258dp"
+                android:text="@string/show_password" />
+
+            <Button
+                android:id="@+id/btn_sign_in_login"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/form_margin_x2"
+                android:layout_marginRight="@dimen/form_margin_x2"
+                app:layout_constraintTop_toBottomOf="@+id/check_box_show_password_login"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@drawable/login_button_form_frame"
+                android:text="@string/sign_in"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/standard_text_size_x1.5" />
+
+
+
+
+    <TextView
+        android:id="@+id/text_view_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/standard_margin_x5"
+        android:text="@string/forgot_password"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in_login" />
+
+    <TextView
+        android:id="@+id/text_view_go_to_register_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/standard_margin_x4"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textSize="@dimen/standard_text_size_x1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_forgot_password" />
+
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/text_view_for_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/app_bar_login"-->
+        <!--android:layout_marginTop="@dimen/standard_margin"-->
+        <!--android:layout_height="wrap_content" />-->
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

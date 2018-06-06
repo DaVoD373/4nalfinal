@@ -209,15 +209,6 @@
 
 
 
-        <View
-            android:id="@+id/line_vertical"
-            android:layout_width="1dp"
-            android:layout_height="290dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:background="@color/color_4nal"
-            app:layout_constraintTop_toBottomOf="@+id/line_below_specification_product_title"
-            />
 
         <View
             android:id="@+id/line_below_specification_product_title"
@@ -264,6 +255,13 @@
 
 
         <!--second line-->
+
+        <View
+                    android:id="@+id/line_darker_number_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line_below_stock_status"
+                    android:background="@color/background_main_page"/>
 
         <TextView
             android:id="@+id/text_view_specification_product_number_stock"
@@ -335,6 +333,13 @@
 
         <!--4th line-->
 
+        <View
+                    android:id="@+id/line_darker_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line_below_brand"
+                    android:background="@color/background_main_page"/>
+
         <TextView
             android:id="@+id/text_view_specification_product_weight"
             android:layout_width="wrap_content"
@@ -405,6 +410,13 @@
 
         <!--6th line-->
 
+                <View
+                    android:id="@+id/line_below_information_title_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@+id/line_below_dimension"
+                    android:background="@color/background_main_page"/>
+
         <TextView
             android:id="@+id/text_view_specification_product_color"
             android:layout_width="wrap_content"
@@ -472,6 +484,16 @@
             app:layout_constraintTop_toBottomOf="@+id/text_view_second_column_specification_size"
             android:layout_marginTop="8dp"
             android:background="@color/color_4nal"/>
+
+        <View
+            android:id="@+id/line_vertical"
+            android:layout_width="1dp"
+            android:layout_height="290dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@color/color_4nal"
+            app:layout_constraintTop_toBottomOf="@+id/line_below_specification_product_title" />
+
 
 
 

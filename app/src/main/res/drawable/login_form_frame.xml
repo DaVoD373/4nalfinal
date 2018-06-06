@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/standard_views_radius"/>
+            <solid android:color="@color/color_in_form"/>
+            <stroke android:color="@color/color_4nal" android:width="@dimen/form_width"/>
+        </shape>
+    </item>
+    <item android:state_focused="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/standard_views_radius"/>
+            <solid android:color="@color/color_in_form"/>
+            <stroke android:color="@color/form_unfocused_frame" android:width="@dimen/form_width"/>
+        </shape>
+    </item>
+
+</selector>

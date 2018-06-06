@@ -8,13 +8,13 @@
     <string name="category">دسته بندی محصولات</string>
     <string name="shopping_cart">سبد خرید</string>
     <string name="most_popular">محبوب\u200cترین\u200cها</string>
-    <string name="most_sales">پرفروش ترین ها</string>
-    <string name="most_seen">پربازدیدترین ها</string>
+    <string name="most_sales">پرفروش\u200cترین\u200cها</string>
+    <string name="most_seen">پربازدیدترین\u200cها</string>
     <string name="setting">تنظیمات</string>
     <string name="about_us">درباره چهار نعل</string>
     <string name="search">جستجو</string>
     <string name="navigation_header_login_register">ورود یا ثبت نام</string>
-    <string name="user_name_login_edit_text">شماره موبایل یا ایمیل</string>
+    <string name="user_name_login_edit_text">ایمیل</string>
     <string name="user_name_login">نام کاربری</string>
     <string name="password_login">کلمه عبور</string>
     <string name="show_password">نمایش کلمه عبور</string>
@@ -25,7 +25,7 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="login_activity_title">ورود و ثبت نام</string>
+    <string name="login_activity_title">ورود یا ثبت نام</string>
     <string name="description_profile_layout">برای استفاده از تمامی امکانات 4 نعل، وارد حساب کاربری\u200cتان شوید.</string>
     <string name="provision">قوانین</string>
     <string name="usual_questions">سوالات متداول</string>
@@ -50,4 +50,14 @@
     <string name="size">اندازه</string>
     <string name="brand">برند</string>
     <string name="shopping_bag">سبد خرید</string>
+    <string name="notice_information">اطلاعات آگهی</string>
+    <string name="group">گروه</string>
+    <string name="location">محل</string>
+    <string name="province">استان</string>
+    <string name="call_information">اطلاعات تماس</string>
+    <string name="last_name">نام خانوادگی:</string>
+    <string name="phone_number">شماره تماس:</string>
+    <string name="email">ایمیل:</string>
+    <string name="register_title">ثبت نام</string>
+    <string name="submit">ثبت</string>
 </resources>

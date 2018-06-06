@@ -21,8 +21,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.TestVideoActivity" />
-        <activity android:name=".activity.CategoryListShopActivity"></activity>
-        <activity android:name=".activity.SingleProductInformationShopActivity"></activity>
+        <activity android:name=".activity.CategoryListShopActivity" />
+        <activity android:name=".activity.SingleProductInformationShopActivity" />
+        <activity android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:name=".activity.SingleNoticeInformationActivity" />
+        <activity android:name=".activity.RegisterActivity"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
     </application>
 
 </manifest>
