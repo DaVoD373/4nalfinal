@@ -78,11 +78,14 @@ public class LoginActivity extends AppCompatActivity {
         btnSubmitForgot = findViewById(R.id.btn_submit_forgot);
         editTextUserNameForgot = findViewById(R.id.edit_text_user_name_forgot);
         textViewForBtnForgot = findViewById(R.id.text_view_for_btn_forgot);
+        btnSubmitForgot = findViewById(R.id.btn_submit_forgot);
 
         editTextUserNameRegister.setVisibility(View.GONE);
         editTextPasswordRegister.setVisibility(View.GONE);
         btnSubmitRegister.setVisibility(View.GONE);
         editTextUserNameForgot.setVisibility(View.GONE);
+        btnSubmitForgot.setVisibility(View.GONE);
+
 //        btnSubmitForgot.setVisibility(View.GONE);
 
         textViewGoToRegister.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +110,6 @@ public class LoginActivity extends AppCompatActivity {
                 textViewForBtnForgot.setVisibility(View.VISIBLE);
                 btnSubmitForgot.setVisibility(View.GONE);
 
-
                 toolbarLogin.setTitle("ثبت نام");
 
             }
@@ -124,19 +126,17 @@ public class LoginActivity extends AppCompatActivity {
                 textViewGoToRegister.setVisibility(View.GONE);
                 btnSubmitLogin.setVisibility(View.GONE);
                 btnSubmitRegister.setVisibility(View.GONE);
-//                btnSubmitForgot.setVisibility(View.VISIBLE);
+                btnSubmitForgot.setVisibility(View.VISIBLE);
                 checkBoxPassword.setVisibility(View.GONE);
                 textViewPassword.setVisibility(View.GONE);
                 textViewForBtnForgot.setVisibility(View.GONE);
+                btnSubmitForgot.setVisibility(View.VISIBLE);
+
 
 
                 toolbarLogin.setTitle("فراموشی رمز عبور");
             }
         });
-
-
-
-
     }
 
     @Override
@@ -157,6 +157,8 @@ public class LoginActivity extends AppCompatActivity {
             textViewPassword.setVisibility(View.VISIBLE);
             textViewForBtnForgot.setVisibility(View.VISIBLE);
             btnSubmitForgot.setVisibility(View.VISIBLE);
+            btnSubmitForgot.setVisibility(View.GONE);
+
 
         }
         else if (editTextUserNameForgot.getVisibility()==View.VISIBLE){
@@ -173,6 +175,8 @@ public class LoginActivity extends AppCompatActivity {
             editTextUserNameForgot.setVisibility(View.GONE);
             textViewPassword.setVisibility(View.VISIBLE);
             textViewForBtnForgot.setVisibility(View.VISIBLE);
+            btnSubmitForgot.setVisibility(View.GONE);
+
         }
         else finish();
     }

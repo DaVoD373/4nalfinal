@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
-    android:animateLayoutChanges="true"
+    android:animateLayoutChanges="false"
     tools:context=".activity.LoginActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -22,47 +22,49 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/layout_register"/>
 
     <!--forgot-->
 
-    <EditText
-        android:id="@+id/edit_text_user_name_forgot"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/form_margin"
-        android:layout_marginRight="@dimen/form_margin"
-        android:layout_marginTop="105dp"
-        android:background="@drawable/login_form_frame"
-        android:ems="10"
-        android:gravity="right"
-        android:hint="@string/user_name_login"
-        android:imeOptions="actionNext"
-        android:inputType="text"
-        android:padding="@dimen/standard_margin" />
+    <!--<EditText-->
+        <!--android:id="@+id/edit_text_user_name_forgot"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/form_margin"-->
+        <!--android:layout_marginRight="@dimen/form_margin"-->
+        <!--android:layout_marginTop="105dp"-->
+        <!--android:background="@drawable/login_form_frame"-->
+        <!--android:ems="10"-->
+        <!--android:gravity="right"-->
+        <!--android:hint="@string/user_name_login"-->
+        <!--android:imeOptions="actionNext"-->
+        <!--android:inputType="text"-->
+        <!--android:padding="@dimen/standard_margin" />-->
 
-    <TextView
-        android:id="@+id/text_view_for_btn_forgot"
-        app:layout_constraintTop_toTopOf="@id/edit_text_user_name_login"
-        android:layout_marginTop="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!--<TextView-->
+        <!--android:id="@+id/text_view_for_btn_forgot"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
 
-    <Button
-        android:id="@+id/btn_submit_forgot"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/form_margin_x2"
-        android:layout_marginRight="@dimen/form_margin_x2"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_for_btn_forgot"
-        android:layout_marginTop="126dp"
-        android:background="@drawable/login_button_form_frame"
-        android:text="@string/submit"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/standard_text_size_x1.5" />
+    <!--<Button-->
+        <!--android:id="@+id/btn_submit_forgot"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/form_margin_x2"-->
+        <!--android:layout_marginRight="@dimen/form_margin_x2"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/text_view_for_btn_forgot"-->
+        <!--android:layout_marginTop="230dp"-->
+        <!--android:background="@drawable/login_button_form_frame"-->
+        <!--android:text="@string/submit"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="@dimen/standard_text_size_x1.5" />-->
+
+    <include layout="@layout/layout_register"/>
+    <include layout="@layout/layout_forgot"/>
+
 
 
     <!--login-->
