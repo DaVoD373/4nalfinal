@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.SingleNoticeInformationActivity;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNotice;
 
 public class RecyclerViewNoticeAdapter extends RecyclerView.Adapter<RecyclerViewNoticeAdapter.NoticeViewHolder> {
@@ -38,6 +40,14 @@ public class RecyclerViewNoticeAdapter extends RecyclerView.Adapter<RecyclerView
             holder.title.setText(notice.getTitle());
             holder.content.setText(notice.getContent());
             holder.date.setText(notice.getDate());
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, SingleNoticeInformationActivity.class);
+                    context.startActivity(intent);
+                }
+            });
     }
 
     @Override

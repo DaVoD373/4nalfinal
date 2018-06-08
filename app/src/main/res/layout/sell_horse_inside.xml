@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddNewNoticeActivity">
+
+
+    <TextView
+        android:id="@+id/txt_kind_of_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="نام اسب"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edit_txt_horse_name"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/login_form_frame"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_kind_of_notice" />
+
+    <TextView
+        android:id="@+id/txt_horse_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="جنسیت اسب"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_horse_name" />
+
+    <CheckBox
+        android:id="@+id/check_horse_male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="نریان"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/check_horse_female"
+        app:layout_constraintTop_toBottomOf="@+id/txt_horse_gender" />
+
+    <CheckBox
+        android:id="@+id/check_horse_female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="مادیان"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_content"
+        app:layout_constraintEnd_toStartOf="@+id/check_horse_male"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/check_horse_male" />
+
+    <TextView
+        android:id="@+id/txt_horse_strips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="نژاد اسب"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_horse_male" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spin_strips"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_horse_strips"
+        app:ms_dropdown_max_height="250dp" />
+
+    <TextView
+        android:id="@+id/txt_horse_ability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        android:text="حرفه اسب"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_strips" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spin_ability"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_horse_ability"
+        app:ms_dropdown_max_height="250dp" />
+
+    <TextView
+        android:id="@+id/txt_province"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="استان"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_ability" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spin_province"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        android:nextFocusDown="@id/spin_city"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_province"
+        app:ms_dropdown_max_height="250dp" />
+
+    <TextView
+        android:id="@+id/txt_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="شهر"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_province" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spin_city"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_city"
+        app:ms_dropdown_max_height="250dp" />
+
+    <TextView
+        android:id="@+id/txt_horse_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="سن اسب"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_city" />
+
+    <com.travijuu.numberpicker.library.NumberPicker
+        android:id="@+id/num_pick_horse_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="46dp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_horse_age"
+        app:layout_constraintTop_toTopOf="@+id/txt_horse_age"
+        app:max="50"
+        app:min="0"
+        app:unit="1"
+        app:value="5" />
+
+    <TextView
+        android:id="@+id/txt_prize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="قیمت"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/standard_size_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_pick_horse_age" />
+
+    <EditText
+        android:id="@+id/edit_txt_prize"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/login_form_frame"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prize" />
+
+    <Button
+        android:id="@+id/btn_submit_sell_horse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/login_button_form_frame"
+        android:text="ثبت آگهی"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_prize"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

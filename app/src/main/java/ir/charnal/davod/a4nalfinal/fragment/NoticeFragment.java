@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,10 +17,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.AddNewNoticeActivity;
 import ir.charnal.davod.a4nalfinal.activity.SingleProductInformationShopActivity;
 import ir.charnal.davod.a4nalfinal.adapter.RecyclerViewNoticeAdapter;
 
@@ -27,6 +31,7 @@ public class NoticeFragment extends Fragment {
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
+    private FloatingActionButton fab;
 
 
     public NoticeFragment() {
@@ -49,13 +54,32 @@ public class NoticeFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        setupFloatActionButton(view);
+
         RecyclerView recyclerViewNoticeList = view.findViewById(R.id.recycler_view_newest_notices);
         recyclerViewNoticeList.setAdapter(new RecyclerViewNoticeAdapter(getActivity(), DataFakeGenerator.getFakeData(getActivity())));
         recyclerViewNoticeList.addItemDecoration(new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
 
+        recyclerViewNoticeList.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy>0 && fab.isShown())
+                    fab.hide();
+                if (dy<0)
+                    fab.show();
+            }
+        });
+
 
         //for notice category and show or hide the category buttons.
         setupCategoryButton();
+
       //  setupToolbar(view);
 
 
@@ -92,8 +116,24 @@ public class NoticeFragment extends Fragment {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
+    }
 
+    private void setupFloatActionButton(View view) {
+        fab = view.findViewById(R.id.fab_notice);
+        final ScaleAnimation scaleAnimation = new ScaleAnimation
+                (1.0f,0.5f,1.0f,0.5f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        scaleAnimation.setDuration(250);
+        scaleAnimation.setRepeatCount(1);
+        scaleAnimation.setRepeatMode(Animation.REVERSE);
 
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fab.startAnimation(scaleAnimation);
+                Intent intent = new Intent(getActivity(),AddNewNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

@@ -108,8 +108,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_newest_notice" />
 
+
         </android.support.constraint.ConstraintLayout>
 
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_notice"
+        app:srcCompat="@drawable/vc_add_black"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="@dimen/_90sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        app:fabSize="normal"
+        android:clickable="true"
+        tools:ignore="VectorDrawableCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true" />
 
 </android.support.design.widget.CoordinatorLayout>
