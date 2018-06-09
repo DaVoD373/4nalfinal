@@ -1,5 +1,6 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -10,8 +11,13 @@ import android.view.MenuItem;
 
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopListViewPagerAdapter;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CategoryListShopActivity extends AppCompatActivity {
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

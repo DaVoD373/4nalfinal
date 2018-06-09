@@ -1,5 +1,6 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +11,13 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.cityholderofiran.CityOfIranHolder;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AddNewNoticeActivity extends AppCompatActivity {
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
