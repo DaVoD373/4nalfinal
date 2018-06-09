@@ -23,11 +23,11 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
     private Context context;
     private List<DataModelCategoryShopListFragments> categoriesShopListFragment;
 
-    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment){
-
+    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment) {
         this.context = context;
         this.categoriesShopListFragment = categoriesShopListFragment;
     }
+
 
     @NonNull
     @Override
