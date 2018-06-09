@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main_page"
+    android:layoutDirection="rtl"
+    tools:context=".activity.ShoppingCartActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_shopping_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_shopping_cart"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:title="@string/shopping_cart" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_for_button_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:paddingTop="@dimen/standard_margin">
+
+        <ScrollView
+            android:id="@+id/nested"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:paddingBottom="@dimen/standard_margin_x8"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toTopOf="@id/btn_finalize_shopping_cart"
+            app:layout_constraintTop_toTopOf="@id/constraint_for_button_bottom">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_shopping_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_price_shopping_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/standard_margin_x2"
+                    android:layout_marginTop="@dimen/standard_margin_x2"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_view_shopping_cart">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="@dimen/standard_margin">
+
+                        <TextView
+                            android:id="@+id/text_view_final_price_shopping_cart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/standard_margin"
+                            android:layout_marginTop="@dimen/standard_margin"
+                            android:text="@string/products_final_price"
+                            android:textColor="@color/color_4nal"
+                            android:textSize="@dimen/standard_text_size_x1.5"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view_toman_shopping_cart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/standard_margin"
+                            android:layout_marginTop="@dimen/standard_margin"
+                            android:text="@string/price_unit"
+                            android:textColor="@color/color_4nal"
+                            android:textSize="@dimen/standard_text_size"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/text_view_final_price_shopping_cart" />
+
+                        <TextView
+                            android:id="@+id/price_number_shopping_cart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/standard_margin"
+                            android:text="150,000"
+                            android:textColor="@color/color_4nal"
+                            android:textSize="@dimen/standard_text_size"
+                            app:layout_constraintLeft_toRightOf="@id/text_view_toman_shopping_cart"
+                            app:layout_constraintTop_toTopOf="@id/text_view_toman_shopping_cart" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btn_finalize_shopping_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_4nal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="@string/finalize_order"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/standard_text_size_x1.25"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -23,6 +23,7 @@ import java.util.List;
 import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
+import ir.charnal.davod.a4nalfinal.activity.ShoppingCartActivity;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopMainPageAdapter;
 import ir.charnal.davod.a4nalfinal.adapter.ProductShopMainPageAdapter;
 import ss.com.bannerslider.banners.Banner;
@@ -68,6 +69,8 @@ public class ShopFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.menu_category_shop:
                 startActivity(new Intent(getActivity(), CategoryListShopActivity.class));
+            case R.id.menu_shopping_cart:
+                startActivity(new Intent(getActivity(), ShoppingCartActivity.class));
         }
         return true;
     }

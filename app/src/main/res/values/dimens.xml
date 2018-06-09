@@ -7,6 +7,7 @@
     <dimen name="standard_views_radius">12dp</dimen>
     <integer name="max_line_products_main_page">2</integer>
     <dimen name="standard_text_size">18sp</dimen>
+    <dimen name="standard_text_size_x1.25">22sp</dimen>
     <dimen name="standard_text_size_x1.5">27sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="form_margin">60dp</dimen>
@@ -14,6 +15,8 @@
     <dimen name="form_width">1dp</dimen>
     <dimen name="banner_height">180dp</dimen>
     <dimen name="corner_card_view_default_radius">4dp</dimen>
+    <dimen name="card_view_default_radius">4dp</dimen>
+    <dimen name="cardview_default_elevation">4dp</dimen>
     <dimen name="layout_products_width">170dp</dimen>
     <dimen name="image_product_height">220dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->

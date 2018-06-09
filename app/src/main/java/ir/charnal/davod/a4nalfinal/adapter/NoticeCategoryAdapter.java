@@ -27,7 +27,7 @@ public class NoticeCategoryAdapter extends RecyclerView.Adapter<NoticeCategoryAd
     @NonNull
     @Override
     public NoticeCategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.category_notice_model_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.model_category_notice_layout,parent,false);
         return new NoticeCategoryViewHolder(view);
     }
 

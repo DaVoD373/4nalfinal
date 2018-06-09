@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:paddingBottom="40dp"
+    android:layoutDirection="rtl">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_first_name_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_last_name_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_first_name_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_company_name_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="نام شرکت (اختیاری)"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_last_name_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_province_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/province"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_company_name_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_city_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/city"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_province_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_post_address_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/address"
+        android:inputType="textMultiLine"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_city_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_postal_code_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/postal_code"
+        android:inputType="number"
+        android:maxLength="10"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_post_address_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_phone_number_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/phone_number"
+        android:inputType="number"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_postal_code_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit_text_email_finalize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:gravity="right"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_phone_number_finalize"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/color_4nal"
+        app:met_underlineColor="@color/color_4nal"/>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

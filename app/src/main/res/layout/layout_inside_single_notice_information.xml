@@ -283,7 +283,7 @@
 
         <TextView
             android:id="@+id/text_view_phone_number"
-            android:text="@string/phone_number"
+            android:text="@string/phone_number_2"
             android:textSize="@dimen/standard_text_size"
             android:textColor="@android:color/black"
             app:layout_constraintRight_toRightOf="parent"
@@ -306,7 +306,7 @@
 
         <TextView
             android:id="@+id/text_view_email"
-            android:text="@string/email"
+            android:text="@string/email_2"
             android:textSize="@dimen/standard_text_size"
             android:textColor="@android:color/black"
             app:layout_constraintTop_toBottomOf="@+id/text_view_phone_number"

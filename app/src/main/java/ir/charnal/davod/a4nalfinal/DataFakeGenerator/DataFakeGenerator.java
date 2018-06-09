@@ -2,12 +2,16 @@ package ir.charnal.davod.a4nalfinal.DataFakeGenerator;
 
 import android.content.Context;
 import android.support.v4.content.res.ResourcesCompat;
+
+import com.travijuu.numberpicker.library.NumberPicker;
+
 import ir.charnal.davod.a4nalfinal.R;
 import java.util.ArrayList;
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopListFragments;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopMainPage;
+import ir.charnal.davod.a4nalfinal.datamodel.DataModelListShoppingCart;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNotice;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNoticeCategory;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelProductShopMainPage;
@@ -238,6 +242,29 @@ public class DataFakeGenerator {
 
         }
         return categoryFragmentDataModelList;
+    }
+
+    public static List<DataModelListShoppingCart> getShoppingCartListData (Context context){
+        List<DataModelListShoppingCart> shoppingCartList = new ArrayList<>();
+        DataModelListShoppingCart shoppingCart = new DataModelListShoppingCart();
+        shoppingCart.setImage(ResourcesCompat.getDrawable(context.getResources(),R.drawable.horse6,null));
+
+        for (int i = 0; i < 3; i++) {
+            switch (i){
+                case 0:
+                    shoppingCart.setPriceAll("645,000");
+                    break;
+                case 1:
+                    shoppingCart.setPriceOne("15,000");
+                    break;
+                case 2:
+                    shoppingCart.setPriceOne("1,000");
+                    break;
+            }
+            shoppingCartList.add(shoppingCart);
+
+        }
+        return shoppingCartList;
     }
 
 }

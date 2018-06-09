@@ -33,7 +33,7 @@ public class ProductShopMainPageAdapter extends RecyclerView.Adapter<ProductShop
     @NonNull
     @Override
     public ProductShopMainPageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.product_shop_main_page_model_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.model_product_shop_main_page_layout,parent,false);
         return new ProductShopMainPageViewHolder(view);
     }
 

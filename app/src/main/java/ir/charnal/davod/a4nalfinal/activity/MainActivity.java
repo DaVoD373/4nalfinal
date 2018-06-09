@@ -2,6 +2,7 @@ package ir.charnal.davod.a4nalfinal.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationController mNavigationController;
     private DrawerLayout drawerLayout;
     NavigationView navigationViewShop,navigationViewNotice;
+
+
 
 
     @Override
@@ -77,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 
 
