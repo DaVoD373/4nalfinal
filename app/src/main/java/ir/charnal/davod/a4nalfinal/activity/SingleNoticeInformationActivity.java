@@ -1,5 +1,6 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.ActionBar;
@@ -10,6 +11,8 @@ import android.view.Gravity;
 import android.view.MenuItem;
 
 import ir.charnal.davod.a4nalfinal.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SingleNoticeInformationActivity extends AppCompatActivity {
 
@@ -27,6 +30,7 @@ public class SingleNoticeInformationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupFont();
         setContentView(R.layout.activity_single_notice_information);
 
         final Toolbar toolbarSingleNoticeInformation = findViewById(R.id.toolbar_single_notice_information);
@@ -45,5 +49,16 @@ public class SingleNoticeInformationActivity extends AppCompatActivity {
         collapsingToolbarSingleNotice.setExpandedTitleColor(Color.TRANSPARENT);
         collapsingToolbarSingleNotice.setExpandedTitleGravity(Gravity.LEFT);
         collapsingToolbarSingleNotice.setCollapsedTitleGravity(Gravity.RIGHT);
+    }
+
+    private void setupFont() {
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/iran_sans.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

@@ -11,17 +11,15 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.cityholderofiran.CityOfIranHolder;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AddNewNoticeActivity extends AppCompatActivity {
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupFont();
         setContentView(R.layout.activity_add_new_notice);
 
         setupViews();
@@ -73,6 +71,17 @@ public class AddNewNoticeActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void setupFont() {
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/iran_sans.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 }

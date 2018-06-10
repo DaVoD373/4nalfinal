@@ -1,5 +1,6 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,6 +18,8 @@ import java.io.File;
 import java.net.URISyntaxException;
 
 import ir.charnal.davod.a4nalfinal.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class TestVideoActivity extends AppCompatActivity {
 
@@ -26,6 +29,7 @@ public class TestVideoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupFont();
         setContentView(R.layout.activity_test_video);
 
 
@@ -64,5 +68,16 @@ public class TestVideoActivity extends AppCompatActivity {
 
             }
         }
+    }
+
+    private void setupFont() {
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/iran_sans.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

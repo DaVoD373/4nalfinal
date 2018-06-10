@@ -98,7 +98,7 @@
         android:paddingRight="@dimen/standard_margin"
         android:paddingTop="@dimen/standard_margin"
         app:cardCornerRadius="@dimen/corner_card_view_default_radius"
-        app:cardElevation="@dimen/card_view_default_elevation"
+        app:cardElevation="@dimen/cardview_default_elevation"
         app:layout_constraintTop_toBottomOf="@+id/text_view_description_product_shop">
 
         <android.support.constraint.ConstraintLayout

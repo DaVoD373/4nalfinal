@@ -37,6 +37,7 @@
                 android:id="@+id/category_shop_list_tab_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
                 android:layout_alignParentEnd="true"
                 android:background="@color/background_view_pager_category_list"
                 app:tabGravity="fill"
@@ -49,5 +50,9 @@
                 android:layout_below="@+id/category_shop_list_tab_layout" />
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
+<FrameLayout
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
 </android.support.design.widget.CoordinatorLayout>

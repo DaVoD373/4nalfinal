@@ -3,12 +3,10 @@ package ir.charnal.davod.a4nalfinal.DataFakeGenerator;
 import android.content.Context;
 import android.support.v4.content.res.ResourcesCompat;
 
-import com.travijuu.numberpicker.library.NumberPicker;
-
-import ir.charnal.davod.a4nalfinal.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopListFragments;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopMainPage;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelListShoppingCart;
