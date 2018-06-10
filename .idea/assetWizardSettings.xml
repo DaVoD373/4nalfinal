@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio3.0.1/plugins/android/lib/android.jar!/images/material_design_icons/image/ic_grid_on_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_loop_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,9 +33,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="vc_grid_on_black" />
+                            <entry key="opacityPercent" value="69" />
+                            <entry key="outputName" value="ic_comparison_2" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\DaVoD" />
+                            <entry key="sourceFile" value="C:\Users\Sajjad\Desktop\sss.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -14,7 +14,7 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_category_shop_fragment"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
             android:layoutDirection="rtl"
             app:layout_scrollFlags="scroll|enterAlways"
             app:title="@string/category" />

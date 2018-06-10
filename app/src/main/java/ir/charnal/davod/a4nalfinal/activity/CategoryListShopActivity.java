@@ -51,6 +51,8 @@ public class CategoryListShopActivity extends AppCompatActivity {
             CategoryShopListViewPagerAdapter categoryListViewPagerAdapter = new CategoryShopListViewPagerAdapter(getSupportFragmentManager());
             categoryShopListViewPager.setAdapter(categoryListViewPagerAdapter);
             categoryShopListTabLayout.setupWithViewPager(categoryShopListViewPager);
+            //gozashtam dame dast bashe
+//            categoryShopListViewPager.setCurrentItem(9);
             categoryShopListViewPager.setCurrentItem(recyclerPosition);
 
         }
@@ -64,11 +66,7 @@ public class CategoryListShopActivity extends AppCompatActivity {
 
 
     }
-//for set font
-//    @Override
-//    protected void attachBaseContext(Context newBase) {
-//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-//    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

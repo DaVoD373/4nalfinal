@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -86,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextUserNameForgot = findViewById(R.id.edit_text_user_name_forgot);
         textViewForBtnForgot = findViewById(R.id.text_view_for_btn_forgot);
         btnSubmitForgot = findViewById(R.id.btn_submit_forgot);
+
 
         editTextUserNameRegister.setVisibility(View.GONE);
         editTextPasswordRegister.setVisibility(View.GONE);

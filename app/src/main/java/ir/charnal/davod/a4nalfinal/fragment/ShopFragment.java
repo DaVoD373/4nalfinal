@@ -69,8 +69,10 @@ public class ShopFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.menu_category_shop:
                 startActivity(new Intent(getActivity(), CategoryListShopActivity.class));
+                break;
             case R.id.menu_shopping_cart:
                 startActivity(new Intent(getActivity(), ShoppingCartActivity.class));
+                break;
         }
         return true;
     }

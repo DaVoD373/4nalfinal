@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Toolbar toolbar = findViewById(R.id.toolbar_main);
+        final Toolbar toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_main);
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         mNavigationController = pageBottomTabLayout.material()
                 .addItem(R.drawable.vc_shop_black_24dp,"فروشگاه")
                 .addItem(R.drawable.vc_notice_black_24dp,"آگهی ها")
-                .addItem(R.drawable.vc_profile_black_24dp,"پزوفایل")
+                .addItem(R.drawable.vc_profile_black_24dp,"پروفایل")
                 .setDefaultColor(0x89FFFFFF)
                 .setMode(MaterialMode.CHANGE_BACKGROUND_COLOR | MaterialMode.HIDE_TEXT)
                 .build();
@@ -75,6 +75,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSelected(int index, int old) {
               // Toast.makeText(MainActivity.this, ""+mNavigationController.getSelected(), Toast.LENGTH_SHORT).show();
+                switch (index){
+                    case 0:
+                        toolbar.setTitle("فروشگاه");
+                        break;
+                    case 1:
+                        toolbar.setTitle("آگهی ها");
+                        break;
+                    case 2:
+                        toolbar.setTitle("پروفایل");
+                }
             }
 
             @Override

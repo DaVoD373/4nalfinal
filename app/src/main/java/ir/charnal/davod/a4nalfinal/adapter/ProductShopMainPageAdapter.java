@@ -67,8 +67,8 @@ public class ProductShopMainPageAdapter extends RecyclerView.Adapter<ProductShop
         public ProductShopMainPageViewHolder(View itemView) {
             super(itemView);
             productPicShopMainPage = itemView.findViewById(R.id.product_shop_main_page_pic);
-            productContentShopMainPage = itemView.findViewById(R.id.product_content_shop_main_page);
-            productPriceShopMainPage = itemView.findViewById(R.id.product_price_shop_main_page);
+            productContentShopMainPage = itemView.findViewById(R.id.text_view_product_content_shop_main_page);
+            productPriceShopMainPage = itemView.findViewById(R.id.text_view_product_price_shop_main_page);
         }
     }
 }

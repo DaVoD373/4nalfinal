@@ -162,7 +162,7 @@ public class DataFakeGenerator {
                             " کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد" +
                             "ه از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم " +
                             "است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.");
-                    productShopMainPage.setPrice("7,000" + moneyUnit);
+                    productShopMainPage.setPrice("7,000");
                     break;
                 case 8:
                     productShopMainPage.setContent("8 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد" +
@@ -171,7 +171,7 @@ public class DataFakeGenerator {
                             " کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاد" +
                             "ه از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم " +
                             "است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.");
-                    productShopMainPage.setPrice("7,658,000" + moneyUnit);
+                    productShopMainPage.setPrice("7,658,000");
                     break;
             }
             productsListShopMainPage.add(productShopMainPage);

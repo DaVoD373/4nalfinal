@@ -23,4 +23,5 @@
     <color name="text_title_color">#1d1b1b</color>
     <color name="blue_light">#0cbeef</color>
     <color name="white">#fff</color>
+    <color name="green_price">#32CD32</color>
 </resources>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="@dimen/standard_margin"
     android:layout_marginLeft="@dimen/standard_margin_x2"
     android:layout_marginTop="@dimen/standard_margin"
     app:cardCornerRadius="2dp"
-    app:cardElevation="0dp"
-    >
+    app:cardElevation="0dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="@dimen/layout_products_width"
@@ -17,13 +16,13 @@
         android:layoutDirection="rtl">
 
         <ImageView
-            android:id="@+id/product_shop_main_page_pic"
+            android:id="@+id/product_special_shop_main_page_pic"
             android:layout_width="match_parent"
             android:layout_height="@dimen/image_product_height"
             tools:src="@drawable/horse_sample_pic" />
 
         <TextView
-            android:id="@+id/text_view_product_content_shop_main_page"
+            android:id="@+id/text_view_product_special_content_shop_main_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -33,41 +32,69 @@
             android:paddingRight="@dimen/standard_margin_x2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_shop_main_page_pic"
+            app:layout_constraintTop_toBottomOf="@+id/product_special_shop_main_page_pic"
             tools:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد." />
 
         <View
-            android:id="@+id/line_below_product_main_page_shop"
+            android:id="@+id/line_below_product_special_main_page_shop"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="@dimen/standard_margin"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_view_product_content_shop_main_page"
+            app:layout_constraintTop_toBottomOf="@id/text_view_product_special_content_shop_main_page"
             android:background="@color/color_4nal"/>
 
         <TextView
-            android:id="@+id/text_view_toman_product_shop_main_page"
+            android:id="@+id/text_view_toman_special_discount_product_shop_main_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:text="@string/price_unit"
-            app:layout_constraintTop_toBottomOf="@id/line_below_product_main_page_shop"
+            app:layout_constraintTop_toBottomOf="@id/line_below_product_special_main_page_shop"
             android:layout_marginTop="@dimen/standard_margin"
             android:layout_marginLeft="@dimen/standard_margin"
+            android:text="@string/price_unit"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="272dp" />
+
+        <TextView
+            android:id="@+id/text_view_discount_special_product_price_shop_main_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="12dp"
+            android:layoutDirection="ltr"
+            app:layout_constraintLeft_toRightOf="@id/text_view_toman_special_product_shop_main_page"
+            app:layout_constraintTop_toBottomOf="@+id/line_below_product_special_main_page_shop"
+            tools:text="1,100,000" />
+
+        <TextView
+            android:id="@+id/text_view_toman_special_product_shop_main_page"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/price_unit"
+            app:layout_constraintTop_toBottomOf="@id/text_view_toman_special_discount_product_shop_main_page"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:textSize="14dp"
             android:textColor="@color/green_price"
             android:paddingBottom="@dimen/standard_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/text_view_product_price_shop_main_page"
+            android:id="@+id/text_view_product_special_price_shop_main_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="14dp"
             android:layout_marginLeft="@dimen/standard_margin"
-            android:layout_marginTop="@dimen/standard_margin"
             android:textColor="@color/green_price"
             android:layoutDirection="ltr"
-            app:layout_constraintLeft_toRightOf="@id/text_view_toman_product_shop_main_page"
-            app:layout_constraintTop_toBottomOf="@+id/line_below_product_main_page_shop"
+            app:layout_constraintLeft_toRightOf="@id/text_view_toman_special_product_shop_main_page"
+            app:layout_constraintTop_toTopOf="@+id/text_view_toman_special_product_shop_main_page"
             tools:text="1,100,000" />
 
 

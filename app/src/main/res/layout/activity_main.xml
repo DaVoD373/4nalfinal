@@ -20,7 +20,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            app:titleTextColor="#fff"
             app:layout_scrollFlags="scroll|enterAlways"/>
     </android.support.design.widget.AppBarLayout>
 
