@@ -15,7 +15,6 @@ public class CategoryShopListViewPagerAdapter extends FragmentPagerAdapter {
     }
 
 
-//please check this line error
     @Override
     public Fragment getItem(int position) {
         return CategoryShopListFragment.newInstance();
@@ -23,7 +22,7 @@ public class CategoryShopListViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 7;
+        return 8;
     }
 
     public CharSequence getPageTitle(int position) {
@@ -31,19 +30,21 @@ public class CategoryShopListViewPagerAdapter extends FragmentPagerAdapter {
 //         this tabs is reverse. so I should write the tab number inverted.
         switch (position){
             case 0:
-                return "مادر و کودک";
-            case 1:
                 return "کالای دیجیتال";
-            case 2:
+            case 1:
                 return "مد و پوشاک";
+            case 2:
+                return "خانه، آشپزخانه و ابزار";
             case 3:
-                return "خانه";
-            case 4:
                 return "آرایشی و بهداشتی";
-            case 5:
+            case 4:
                 return "کتاب، فرهنگ و هنر";
-            case 6:
+            case 5:
                 return "ورزش و سفر";
+            case 6:
+                return "مادر و کودک";
+            case 7:
+                return "وسایل نقلیه و صنعتی";
             default:
                 return "";
         }

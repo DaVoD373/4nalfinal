@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopMainPage;
 
 public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategoryShopMainPageAdapter.CategoryShopMainPageViewHolder> {
@@ -18,6 +20,7 @@ public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategorySh
 
     private final Context context;
     private final List<DataModelCategoryShopMainPage> categoriesShopMainPage;
+    public static final String RECYCLER_POSITION = "recycler_position";
 
     public CategoryShopMainPageAdapter (Context context, List<DataModelCategoryShopMainPage> categoriesShopMainPage){
 
@@ -32,9 +35,18 @@ public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategorySh
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryShopMainPageViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryShopMainPageViewHolder holder, final int position) {
         DataModelCategoryShopMainPage categoryShopMainPage = categoriesShopMainPage.get(position);
         holder.textViewCategoryShopMainPage.setText(categoryShopMainPage.getProductName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CategoryListShopActivity.class);
+                intent.putExtra(RECYCLER_POSITION,position);
+                context.startActivity(intent);
+            }
+        });
     }
 
 

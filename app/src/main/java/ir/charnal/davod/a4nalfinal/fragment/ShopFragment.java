@@ -51,7 +51,7 @@ public class ShopFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_shop,container,false);
-      //  setupToolbar(view);
+
         return view;
     }
 
@@ -129,8 +129,7 @@ public class ShopFragment extends Fragment {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
-
-
-
     }
+
+
 }

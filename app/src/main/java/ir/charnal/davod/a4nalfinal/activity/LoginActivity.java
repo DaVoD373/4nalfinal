@@ -1,12 +1,9 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Typeface;
-import android.os.Build;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -19,14 +16,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import ir.charnal.davod.a4nalfinal.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LoginActivity extends AppCompatActivity {
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
 
     private TextView textViewGoToRegister;
     private EditText editTextUserNameLogin;
@@ -57,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupFont();
         setContentView(R.layout.activity_login);
 
         setupToolbar();
@@ -221,5 +215,15 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private void setupFont() {
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/iran_sans.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
 }

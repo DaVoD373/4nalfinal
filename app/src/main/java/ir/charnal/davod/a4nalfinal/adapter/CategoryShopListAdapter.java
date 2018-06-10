@@ -1,6 +1,7 @@
 package ir.charnal.davod.a4nalfinal.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopListFragments;
 
 /**
@@ -22,12 +24,14 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
 
     private Context context;
     private List<DataModelCategoryShopListFragments> categoriesShopListFragment;
+    public static final String ID_OF_ADAPTER="id_of_adapter";
 
+    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment){
 
-    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment) {
         this.context = context;
         this.categoriesShopListFragment = categoriesShopListFragment;
     }
+
 
     @NonNull
     @Override
@@ -41,6 +45,15 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
         DataModelCategoryShopListFragments categoryShopFragment = categoriesShopListFragment.get(position);
         holder.categoryShopListImage.setImageDrawable(categoryShopFragment.getCategoryImage());
         holder.CategoryShopListName.setText(categoryShopFragment.getCategoryName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CategoryListShopActivity.class);
+                intent.putExtra(ID_OF_ADAPTER,1);
+                context.startActivity(intent);
+            }
+        });
         //listName
 
     }
