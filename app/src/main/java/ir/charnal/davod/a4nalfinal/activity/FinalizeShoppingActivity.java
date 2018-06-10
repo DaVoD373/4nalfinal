@@ -6,15 +6,28 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.ScrollView;
 
 import ir.charnal.davod.a4nalfinal.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class FinalizeShoppingActivity extends AppCompatActivity {
+
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+        }
+
+        return true;
     }
 
     @Override
