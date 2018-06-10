@@ -23,7 +23,7 @@
                     android:title="@string/favorites_list"
                     android:icon="@drawable/ic_favorite"/>
                 <item
-                    android:id="@+id/shopping_bag"
+                    android:id="@+id/navigation_shopping_cart"
                     android:title="@string/shopping_bag"
                     android:icon="@drawable/vc_shop_black_24dp"/>
             </group>

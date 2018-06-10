@@ -30,7 +30,10 @@
         <activity
             android:name=".activity.RegisterActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
-        <activity android:name=".activity.AddNewNoticeActivity"></activity>
+        <activity android:name=".activity.AddNewNoticeActivity" />
+        <activity android:name=".activity.ShoppingCartActivity" />
+        <activity android:name=".activity.FinalizeShoppingActivity"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
     </application>
 
 </manifest>

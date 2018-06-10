@@ -1,6 +1,8 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +19,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import ir.charnal.davod.a4nalfinal.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LoginActivity extends AppCompatActivity {
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     private TextView textViewGoToRegister;
     private EditText editTextUserNameLogin;
     private EditText editTextUserNameRegister;
@@ -49,17 +58,21 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        setupToolbar();
+        passwordToggle();
+//        Listeners();
+        VisibleGone();
+    }
+
+    private void setupToolbar() {
         toolbarLogin = findViewById(R.id.toolbar_login);
         toolbarLogin.setTitleTextColor(0xFFFFFFFF);
         setSupportActionBar(toolbarLogin);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        passwordToggle();
-//        Listeners();
-        VisibleGone();
     }
-
 
 
     private void VisibleGone() {
@@ -82,11 +95,10 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextUserNameRegister.setVisibility(View.GONE);
         editTextPasswordRegister.setVisibility(View.GONE);
-        btnSubmitRegister.setVisibility(View.GONE);
         editTextUserNameForgot.setVisibility(View.GONE);
-        btnSubmitForgot.setVisibility(View.GONE);
+//        Typeface font = Typeface.createFromAsset(this.getAssets(), "fonts/iran_sans.ttf");
+//        textViewUserName.setTypeface(font);
 
-//        btnSubmitForgot.setVisibility(View.GONE);
 
         textViewGoToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,10 +165,8 @@ public class LoginActivity extends AppCompatActivity {
             editTextUserNameRegister.setVisibility(View.GONE);
             checkBoxPassword.setVisibility(View.VISIBLE);
             editTextUserNameForgot.setVisibility(View.GONE);
-//            btnSubmitForgot.setVisibility(View.GONE);
             textViewPassword.setVisibility(View.VISIBLE);
             textViewForBtnForgot.setVisibility(View.VISIBLE);
-            btnSubmitForgot.setVisibility(View.VISIBLE);
             btnSubmitForgot.setVisibility(View.GONE);
 
 
@@ -175,7 +185,7 @@ public class LoginActivity extends AppCompatActivity {
             editTextUserNameForgot.setVisibility(View.GONE);
             textViewPassword.setVisibility(View.VISIBLE);
             textViewForBtnForgot.setVisibility(View.VISIBLE);
-            btnSubmitForgot.setVisibility(View.GONE);
+            btnSubmitForgot.setVisibility(View.INVISIBLE);
 
         }
         else finish();

@@ -27,7 +27,7 @@ public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategorySh
     @NonNull
     @Override
     public CategoryShopMainPageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.category_shop_main_page_model_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.model_category_shop_main_page_layout,parent,false);
         return new CategoryShopMainPageViewHolder(view);
     }
 

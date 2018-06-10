@@ -32,6 +32,7 @@
         android:id="@+id/btn_submit_forgot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:layout_marginLeft="@dimen/form_margin_x2"
         android:layout_marginRight="@dimen/form_margin_x2"
         app:layout_constraintTop_toBottomOf="@+id/text_view_for_btn_forgot"

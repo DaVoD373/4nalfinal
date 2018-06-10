@@ -8,7 +8,7 @@
     android:layout_marginLeft="@dimen/standard_margin_x2"
     android:layout_marginTop="@dimen/standard_margin"
     app:cardCornerRadius="@dimen/corner_card_view_default_radius"
-    app:cardElevation="@dimen/cardview_default_elevation">
+    app:cardElevation="@dimen/card_view_default_elevation">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="@dimen/layout_products_width"

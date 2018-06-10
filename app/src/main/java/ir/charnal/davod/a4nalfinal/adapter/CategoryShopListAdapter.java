@@ -23,7 +23,8 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
     private Context context;
     private List<DataModelCategoryShopListFragments> categoriesShopListFragment;
 
-    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment) {
+    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment){
+
         this.context = context;
         this.categoriesShopListFragment = categoriesShopListFragment;
     }
@@ -32,7 +33,7 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
     @NonNull
     @Override
     public CategoryShopListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.category_shop_list_model_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.model_category_shop_list_layout,parent,false);
         return new CategoryShopListViewHolder(view);
     }
 
