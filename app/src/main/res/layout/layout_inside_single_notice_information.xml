@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
@@ -22,8 +23,8 @@
             android:id="@+id/image_view_add_bookmark_single_notice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/standard_margin"
-           android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/standard_margin_x2"
+           android:layout_marginTop="@dimen/standard_margin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_bookmark_before" />
@@ -35,6 +36,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="@dimen/standard_margin"
             android:text="1 روز قبل"
+            android:textSize="@dimen/default_text_size"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_view_single_notice_title_name" />
     
@@ -70,7 +72,7 @@
                 android:id="@+id/text_view_group_single_notice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginTop="@dimen/standard_margin"
                 android:text="@string/group"
                 android:textColor="@android:color/black"
@@ -101,10 +103,9 @@
             <View
                 android:id="@+id/line_darker_province"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="9dp"
+                android:layout_height="@dimen/line_darker_specification"
                 android:background="@color/background_main_page"
-                app:layout_constraintTop_toBottomOf="@id/text_view_group_single_notice" />
+                app:layout_constraintTop_toBottomOf="@id/line_below_group_notice" />
 
             <TextView
                 android:id="@+id/text_view_province_single_notice"
@@ -176,10 +177,9 @@
             <View
                 android:id="@+id/line_darker_price_notice"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="9dp"
+                android:layout_height="@dimen/line_darker_specification"
                 android:background="@color/background_main_page"
-                app:layout_constraintTop_toBottomOf="@id/text_view_location_single_notice" />
+                app:layout_constraintTop_toBottomOf="@id/line_below_location_notice" />
 
             <TextView
                 android:id="@+id/text_view_price_single_notice"
@@ -217,7 +217,7 @@
             <View
                 android:id="@+id/line_vertical_notice"
                 android:layout_width="1dp"
-                android:layout_height="165dp"
+                android:layout_height="157dp"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line_below_information_title_notice"
@@ -296,13 +296,16 @@
         <TextView
             android:id="@+id/text_view_second_column_phone_number"
             android:text="09123456789"
+            android:inputType="number"
+            android:autoLink="phone"
             android:textSize="@dimen/standard_text_size"
             app:layout_constraintRight_toLeftOf="@+id/text_view_phone_number"
             app:layout_constraintTop_toBottomOf="@+id/text_view_last_name"
             android:layout_marginTop="@dimen/standard_margin"
             android:layout_marginRight="@dimen/standard_margin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            tools:ignore="TextViewEdits" />
 
         <TextView
             android:id="@+id/text_view_email"

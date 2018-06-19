@@ -16,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,9 @@ public class ShopFragment extends Fragment {
     private BannerSlider bannerSlider;
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
+    Button btnSeeListMostPopular;
+    Button btnSeeListMostSales;
+    Button btnSeeListNewest;
 
 
     @SuppressLint("ValidFragment")
@@ -63,6 +67,13 @@ public class ShopFragment extends Fragment {
 
 
     }
+//Todo set listener for see full lists buttons.
+    private void listeners() {
+//        btnSeeListMostPopular = getView().findViewById(R.id.btn_see_full_list_most_popular);
+//        btnSeeListMostSales = getView().findViewById(R.id.btn_see_full_list_most_sales);
+//        btnSeeListNewest = getView().findViewById(R.id.btn_see_full_list_newest);
+//
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -86,6 +97,9 @@ public class ShopFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        //Todo complete this method.
+        listeners();
+
 
 
         bannerSlider = view.findViewById(R.id.banner_slider_shop);
@@ -100,6 +114,7 @@ public class ShopFragment extends Fragment {
         CategoryShopMainPageAdapter categoryShopMainPageAdapter = new CategoryShopMainPageAdapter(getActivity(),DataFakeGenerator.getCategoryShopDataMainPage(getActivity()));
         recyclerViewCategoryShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
         recyclerViewCategoryShopMainPage.setAdapter(categoryShopMainPageAdapter);
+
 
         //recycler most popular
         RecyclerView recyclerViewMostPopularProductShopMainPage = view.findViewById(R.id.recycler_view_most_popular_shop_main_page);

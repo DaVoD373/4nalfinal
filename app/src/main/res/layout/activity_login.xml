@@ -16,7 +16,7 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_login"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
             app:layout_collapseMode="pin"
             app:title="@string/login_activity_title" />
 
@@ -91,6 +91,7 @@
         android:background="@drawable/login_form_frame"
         android:ems="10"
         android:gravity="right"
+        android:textSize="@dimen/default_text_size"
         android:hint="@string/user_name_login_edit_text"
         android:inputType="text"
         android:padding="@dimen/standard_margin"
@@ -114,6 +115,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/form_margin"
+        android:textSize="@dimen/default_text_size"
         android:layout_marginRight="@dimen/form_margin"
         android:layout_marginTop="@dimen/standard_margin_x2"
         android:background="@drawable/login_form_frame"
@@ -133,6 +135,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="258dp"
         android:text="@string/show_password"
+        android:textSize="@dimen/default_text_size"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

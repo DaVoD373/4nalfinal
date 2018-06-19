@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         final Toolbar toolbar = findViewById(R.id.toolbar_main);
+        toolbar.setTitle("فروشگاه");
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_main);
 

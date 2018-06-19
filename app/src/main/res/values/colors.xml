@@ -11,7 +11,9 @@
     <color name="form_unfocused_frame">#ddd</color>
     <color name="color_in_form">@android:color/white</color>
     <color name="text_see_list">#3A539B</color>
-    <color name="background_main_page">#D2D7D3</color>
+    <color name="text_see_list_light">#3096E0</color>
+    <color name="background_main_page">#EFEDF0</color>
+    <color name="previous_background_main_page">#D2D7D3</color>
     <color name="background_view_pager_category_list">#b1b5b2</color>
     <color name="colorPrimaryLight">#c45c75</color>
     <color name="color_button_login_pressed">#cc1e38</color>
@@ -24,4 +26,5 @@
     <color name="blue_light">#0cbeef</color>
     <color name="white">#fff</color>
     <color name="green_price">#32CD32</color>
+    <color name="price_blue">#1F6299</color>
 </resources>

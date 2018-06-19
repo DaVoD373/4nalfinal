@@ -8,8 +8,7 @@
     android:layout_marginLeft="@dimen/standard_margin_x2"
     android:layout_marginTop="@dimen/standard_margin"
     app:cardCornerRadius="2dp"
-    app:cardElevation="0dp"
-    >
+    app:cardElevation="0dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="@dimen/layout_products_width"
@@ -19,6 +18,7 @@
         <ImageView
             android:id="@+id/product_shop_main_page_pic"
             android:layout_width="match_parent"
+            android:scaleType="centerCrop"
             android:layout_height="@dimen/image_product_height"
             tools:src="@drawable/horse_sample_pic" />
 
@@ -31,6 +31,7 @@
             android:maxLines="@integer/max_line_products_main_page"
             android:paddingLeft="@dimen/standard_margin_x2"
             android:paddingRight="@dimen/standard_margin_x2"
+            android:textSize="@dimen/default_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_shop_main_page_pic"
@@ -40,23 +41,24 @@
             android:id="@+id/line_below_product_main_page_shop"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="@dimen/standard_margin"
+            android:background="@color/color_4nal"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_view_product_content_shop_main_page"
-            android:background="@color/color_4nal"/>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_product_content_shop_main_page" />
 
         <TextView
             android:id="@+id/text_view_toman_product_shop_main_page"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:text="@string/price_unit"
-            app:layout_constraintTop_toBottomOf="@id/line_below_product_main_page_shop"
-            android:layout_marginTop="@dimen/standard_margin"
-            android:layout_marginLeft="@dimen/standard_margin"
-            android:textColor="@color/green_price"
-            android:paddingBottom="@dimen/standard_margin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:textSize="@dimen/default_text_size"
+            android:paddingBottom="@dimen/standard_margin"
+            android:text="@string/price_unit"
+            android:textColor="@color/price_blue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_below_product_main_page_shop" />
 
         <TextView
             android:id="@+id/text_view_product_price_shop_main_page"
@@ -64,8 +66,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/standard_margin"
             android:layout_marginTop="@dimen/standard_margin"
-            android:textColor="@color/green_price"
             android:layoutDirection="ltr"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/price_blue"
             app:layout_constraintLeft_toRightOf="@id/text_view_toman_product_shop_main_page"
             app:layout_constraintTop_toBottomOf="@+id/line_below_product_main_page_shop"
             tools:text="1,100,000" />

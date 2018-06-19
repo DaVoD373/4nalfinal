@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
@@ -51,24 +52,24 @@ public class AddNewNoticeActivity extends AppCompatActivity {
     }
 
     public void setupSpinners(){
-        MaterialSpinner province_spinner = findViewById(R.id.spin_province);
-        final MaterialSpinner city_spinner = findViewById(R.id.spin_city);
-        MaterialSpinner strips_spinner = findViewById(R.id.spin_strips);
-        MaterialSpinner ability_spinner = findViewById(R.id.spin_ability);
-        String[] strips = {"نژاد 1","نژاد 2","نژاد 3","نژاد 4","نژاد 5","نژاد 6","نژاد 7"};
-        String[] ability = {"حرفه 1","حرفه 2","حرفه 3","حرفه 4","حرفه 5","حرفه 6","حرفه 7"};
-
-        strips_spinner.setItems(strips);
-        ability_spinner.setItems(ability);
-
-        province_spinner.setItems(CityOfIranHolder.getProvince());
-        province_spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
-
-            @Override
-            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
-                city_spinner.setItems(CityOfIranHolder.getCity(item));
-            }
-        });
+//        MaterialSpinner province_spinner = findViewById(R.id.spin_province);
+//        final MaterialSpinner city_spinner = findViewById(R.id.spin_city);
+//        MaterialSpinner strips_spinner = findViewById(R.id.spin_strips);
+//        MaterialSpinner ability_spinner = findViewById(R.id.spin_ability);
+//        String[] strips = {"نژاد 1","نژاد 2","نژاد 3","نژاد 4","نژاد 5","نژاد 6","نژاد 7"};
+//        String[] ability = {"حرفه 1","حرفه 2","حرفه 3","حرفه 4","حرفه 5","حرفه 6","حرفه 7"};
+//
+//        strips_spinner.setItems(strips);
+//        ability_spinner.setItems(ability);
+//
+//        province_spinner.setItems(CityOfIranHolder.getProvince());
+//        province_spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+//
+//            @Override
+//            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+//                city_spinner.setItems(CityOfIranHolder.getCity(item));
+//            }
+//        });
 
 
     }

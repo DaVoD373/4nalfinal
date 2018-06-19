@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_main_page"
+    android:background="#EFEDF0"
     android:layoutDirection="rtl">
 
 
@@ -61,10 +61,12 @@
                     android:background="@android:color/transparent"
                     android:paddingLeft="@dimen/standard_margin"
                     android:paddingRight="@dimen/standard_margin"
+                    android:textSize="@dimen/default_text_size"
                     android:text="@string/see_full_list"
-                    android:textColor="@color/text_see_list"
+                    android:textColor="@color/text_see_list_light"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_category_shop" />
+                    app:layout_constraintBottom_toBottomOf="@id/text_view_most_popular"
+                    app:layout_constraintTop_toTopOf="@+id/text_view_most_popular" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_most_popular_shop_main_page"
@@ -98,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="@dimen/space_shop_recycler"
                     android:text="@string/most_sales"
                     android:textSize="@dimen/standard_text_size_x1.5"
                     app:layout_constraintRight_toRightOf="parent"
@@ -108,14 +110,15 @@
                     android:id="@+id/btn_see_full_list_most_sales"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/standard_margin_x5"
                     android:background="@android:color/transparent"
+                    android:textSize="@dimen/default_text_size"
                     android:paddingLeft="@dimen/standard_margin"
                     android:paddingRight="@dimen/standard_margin"
                     android:text="@string/see_full_list"
-                    android:textColor="@color/text_see_list"
+                    android:textColor="@color/text_see_list_light"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/second_ad_store_banner" />
+                    app:layout_constraintBottom_toBottomOf="@id/text_view_most_sales"
+                    app:layout_constraintTop_toTopOf="@+id/text_view_most_sales" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_most_sales_shop_main_page"
@@ -131,8 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginTop="@dimen/standard_margin"
-                    android:paddingTop="@dimen/standard_margin_x4"
+                    android:layout_marginTop="@dimen/space_shop_recycler"
                     android:text="@string/newest"
                     android:textSize="@dimen/standard_text_size_x1.5"
                     app:layout_constraintRight_toRightOf="parent"
@@ -142,14 +144,15 @@
                     android:id="@+id/btn_see_full_list_newest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/standard_margin_x5"
                     android:background="@android:color/transparent"
                     android:paddingLeft="@dimen/standard_margin"
                     android:paddingRight="@dimen/standard_margin"
+                    android:textSize="@dimen/default_text_size"
                     android:text="@string/see_full_list"
-                    android:textColor="@color/text_see_list"
+                    android:textColor="@color/text_see_list_light"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_sales_shop_main_page" />
+                    app:layout_constraintBottom_toBottomOf="@id/text_view_newest_products"
+                    app:layout_constraintTop_toTopOf="@+id/text_view_newest_products" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_newest_products_shop_main_page"

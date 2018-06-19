@@ -54,6 +54,7 @@
     <string name="group">گروه</string>
     <string name="location">محل</string>
     <string name="province">استان</string>
+    <string name="province_2">استان:</string>
     <string name="call_information">اطلاعات تماس</string>
     <string name="last_name_2">نام خانوادگی:</string>
     <string name="phone_number_2">شماره تماس:</string>
@@ -78,4 +79,21 @@
     <string name="address">آدرس دقیق</string>
     <string name="city">شهر</string>
     <string name="go_to_pay">ورود به صفحه پرداخت</string>
+    <string name="sale_notice">آگهی فروش</string>
+    <string name="request_notice">آگهی درخواست</string>
+    <string name="kind_of_notice">نوع آگهی</string>
+    <string name="keshesh">کشش</string>
+    <string name="riding_service">لوازم سوارکاری</string>
+    <string name="gender">جنسیت</string>
+    <string name="nar">نر</string>
+    <string name="madde">ماده</string>
+    <string name="akhte">اخته</string>
+    <string name="horse_race">نژاد اسب</string>
+    <string name="horse">اسب</string>
+    <string name="create_notice">ایجاد آگهی</string>
+    <string name="age_horse">سن اسب</string>
+    <string name="year_2">سال:</string>
+    <string name="month_2">ماه:</string>
+    <string name="location_horse">موقعیت اسب</string>
+    <string name="city_2">شهر:</string>
 </resources>

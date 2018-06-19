@@ -30,22 +30,21 @@ public class CategoryListShopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category_list_shop);
 
         Intent intent = getIntent();
-        int recyclerPosition = intent.getIntExtra(CategoryShopMainPageAdapter.RECYCLER_POSITION,0);
-        int idOfAdapter = intent.getIntExtra(CategoryShopListAdapter.ID_OF_ADAPTER,0);
+        int recyclerPosition = intent.getIntExtra(CategoryShopMainPageAdapter.RECYCLER_POSITION, 0);
+        int idOfAdapter = intent.getIntExtra(CategoryShopListAdapter.ID_OF_ADAPTER, 0);
 
         TabLayout categoryShopListTabLayout = findViewById(R.id.category_shop_list_tab_layout);
         ViewPager categoryShopListViewPager = findViewById(R.id.category_shop_list_view_pager);
 
-        if (idOfAdapter == 1){
+        if (idOfAdapter == 1) {
 
             categoryShopListTabLayout.setVisibility(View.GONE);
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.add(R.id.fragment_container,new CategoryShopListFragment());
+            transaction.add(R.id.fragment_container, new CategoryShopListFragment());
             transaction.commit();
 
-        }else {
-
+        } else {
 
 
             CategoryShopListViewPagerAdapter categoryListViewPagerAdapter = new CategoryShopListViewPagerAdapter(getSupportFragmentManager());
@@ -83,6 +82,7 @@ public class CategoryListShopActivity extends AppCompatActivity {
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));

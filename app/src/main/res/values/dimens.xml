@@ -6,9 +6,13 @@
     <dimen name="standard_margin_x8">64dp</dimen>
     <dimen name="standard_views_radius">12dp</dimen>
     <integer name="max_line_products_main_page">2</integer>
-    <dimen name="standard_text_size">18sp</dimen>
-    <dimen name="standard_text_size_x1.25">22sp</dimen>
-    <dimen name="standard_text_size_x1.5">27sp</dimen>
+    <dimen name="default_text_size">12sp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="standard_text_size">12sp</dimen>
+    <dimen name="standard_text_size_x1.25">14sp</dimen>
+    <dimen name="standard_text_size_x1.5">16sp</dimen>
+    <dimen name="default_text_size_add_notice">12sp</dimen>
+    <dimen name="standard_size_title">14sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="form_margin">60dp</dimen>
     <dimen name="form_margin_x2">120dp</dimen>
@@ -17,17 +21,19 @@
     <dimen name="corner_card_view_default_radius">4dp</dimen>
     <dimen name="card_view_default_radius">4dp</dimen>
     <dimen name="cardview_default_elevation">4dp</dimen>
-    <dimen name="layout_products_width">170dp</dimen>
-    <dimen name="image_product_height">220dp</dimen>
+    <dimen name="layout_products_width">140dp</dimen>
+    <dimen name="image_product_height">160dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="standard_card_radios">6dp</dimen>
     <dimen name="standard_card_elevation">2dp</dimen>
-    <dimen name="standard_size_title">18sp</dimen>
     <dimen name="standard_size_content">16sp</dimen>
     <dimen name="standard_edit_text">32dp</dimen>
     <dimen name="standard_margin_x5">40dp</dimen>
     <dimen name="horizontal_line_specification">1dp</dimen>
+    <dimen name="line_darker_specification">38dp</dimen>
+    <dimen name="space_shop_recycler">30dp</dimen>
+
 </resources>
