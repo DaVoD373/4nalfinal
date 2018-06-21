@@ -28,13 +28,12 @@
             android:name=".activity.LoginActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
         <activity android:name=".activity.SingleNoticeInformationActivity" />
-        <activity
-            android:name=".activity.RegisterActivity"
-            android:windowSoftInputMode="stateAlwaysVisible" />
         <activity android:name=".activity.AddNewNoticeActivity" />
         <activity android:name=".activity.ShoppingCartActivity" />
-        <activity android:name=".activity.FinalizeShoppingActivity"
-            android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity
+            android:name=".activity.FinalizeShoppingActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity android:name=".activity.BankCardInformationActivity"></activity>
     </application>
 
 </manifest>

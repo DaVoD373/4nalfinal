@@ -39,7 +39,7 @@
     <string name="favorites_list">لیست علافه\u200cمندی\u200cها</string>
     <string name="comparison_product">مقایسه</string>
     <string name="product_description">توضیحات کالا</string>
-    <string name="price">قیمت:</string>
+    <string name="price">قیمت</string>
     <string name="add_to_shopping_cart">افزودن به سبد خرید</string>
     <string name="product_specification">مشخصات کامل کالا</string>
     <string name="stock_status">وضعیت موجودی</string>
@@ -96,4 +96,23 @@
     <string name="month_2">ماه:</string>
     <string name="location_horse">موقعیت اسب</string>
     <string name="city_2">شهر:</string>
+    <string name="adaptive">توافقی</string>
+    <string name="swap">معاوضه</string>
+    <string name="enter_price">ورود قیمت</string>
+    <string name="swap_with_2">معاوضه با:</string>
+    <string name="swap_with">معاوضه با</string>
+    <string name="price_2">قیمت:</string>
+    <string name="create_notice_2">ایجاد آگهی:</string>
+    <string name="kind_of_notice_2">نوع آگهی:</string>
+    <string name="gender_2">جنسیت:</string>
+    <string name="horse_race_2">نژاد اسب:</string>
+    <string name="age_horse_2">سن اسب:</string>
+    <string name="location_horse_2">موقعیت اسب:</string>
+    <string name="horse_name_2">نام اسب:</string>
+    <string name="horse_name">نام اسب</string>
+    <string name="horse_color_2">رنگ اسب:</string>
+    <string name="dad_name_2">نام پدر:</string>
+    <string name="dad_name">نام پدر</string>
+    <string name="mom_name_2">نام مادر:</string>
+    <string name="mom_name">نام مادر</string>
 </resources>

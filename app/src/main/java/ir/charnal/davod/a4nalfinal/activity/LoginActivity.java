@@ -1,7 +1,6 @@
 package ir.charnal.davod.a4nalfinal.activity;
 
 import android.content.Context;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -57,20 +56,11 @@ public class LoginActivity extends AppCompatActivity {
         setupToolbar();
         passwordToggle();
 //        Listeners();
-        VisibleGone();
+        listeners();
+
     }
 
-    private void setupToolbar() {
-        toolbarLogin = findViewById(R.id.toolbar_login);
-        toolbarLogin.setTitleTextColor(0xFFFFFFFF);
-        setSupportActionBar(toolbarLogin);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-    }
-
-
-    private void VisibleGone() {
+    private void listeners() {
         toolbarLogin = findViewById(R.id.toolbar_login);
         editTextUserNameLogin = findViewById(R.id.edit_text_user_name_login);
         editTextUserNameRegister = findViewById(R.id.edit_text_user_name_register);
@@ -87,8 +77,22 @@ public class LoginActivity extends AppCompatActivity {
         editTextUserNameForgot = findViewById(R.id.edit_text_user_name_forgot);
         textViewForBtnForgot = findViewById(R.id.text_view_for_btn_forgot);
         btnSubmitForgot = findViewById(R.id.btn_submit_forgot);
+        visibleGone();
 
 
+    }
+
+    private void setupToolbar() {
+        toolbarLogin = findViewById(R.id.toolbar_login);
+        toolbarLogin.setTitleTextColor(0xFFFFFFFF);
+        setSupportActionBar(toolbarLogin);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+
+    private void visibleGone() {
         editTextUserNameRegister.setVisibility(View.GONE);
         editTextPasswordRegister.setVisibility(View.GONE);
         editTextUserNameForgot.setVisibility(View.GONE);
@@ -141,7 +145,6 @@ public class LoginActivity extends AppCompatActivity {
                 btnSubmitForgot.setVisibility(View.VISIBLE);
 
 
-
                 toolbarLogin.setTitle("فراموشی رمز عبور");
             }
         });
@@ -149,7 +152,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (editTextUserNameRegister.getVisibility()==View.VISIBLE){
+        if (editTextUserNameRegister.getVisibility() == View.VISIBLE) {
             toolbarLogin.setTitle("ورود یا ثبت نام");
             editTextPasswordLogin.setVisibility(View.VISIBLE);
             editTextUserNameLogin.setVisibility(View.VISIBLE);
@@ -166,8 +169,7 @@ public class LoginActivity extends AppCompatActivity {
             btnSubmitForgot.setVisibility(View.GONE);
 
 
-        }
-        else if (editTextUserNameForgot.getVisibility()==View.VISIBLE){
+        } else if (editTextUserNameForgot.getVisibility() == View.VISIBLE) {
             toolbarLogin.setTitle("ورود یا ثبت نام");
             editTextPasswordLogin.setVisibility(View.VISIBLE);
             editTextUserNameLogin.setVisibility(View.VISIBLE);
@@ -183,20 +185,8 @@ public class LoginActivity extends AppCompatActivity {
             textViewForBtnForgot.setVisibility(View.VISIBLE);
             btnSubmitForgot.setVisibility(View.INVISIBLE);
 
-        }
-        else finish();
+        } else finish();
     }
-
-
-//    private void Listeners() {
-//        textViewGoToRegister = findViewById(R.id.text_view_go_to_register_login);
-//        textViewGoToRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-//            }
-//        });
-//    }
 
     private void passwordToggle() {
 
@@ -205,11 +195,11 @@ public class LoginActivity extends AppCompatActivity {
         showPasswordCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (!showPasswordCheckBox.isChecked()){
+                if (!showPasswordCheckBox.isChecked()) {
                     passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
 //                    passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
-                if (showPasswordCheckBox.isChecked()){
+                if (showPasswordCheckBox.isChecked()) {
                     passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
 //                    passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                 }
@@ -223,6 +213,7 @@ public class LoginActivity extends AppCompatActivity {
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));

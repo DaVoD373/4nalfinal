@@ -100,7 +100,7 @@
 
 
     <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/edit_text_post_address_finalize"
+        android:id="@+id/edit_text_postal_address_finalize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/standard_margin"
@@ -131,7 +131,7 @@
         android:textSize="@dimen/standard_text_size"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_text_post_address_finalize"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_postal_address_finalize"
         app:met_floatingLabel="highlight"
         app:met_floatingLabelTextColor="@color/color_4nal"
         app:met_underlineColor="@color/color_4nal"/>
@@ -145,7 +145,7 @@
         android:layout_marginTop="@dimen/standard_margin"
         android:gravity="right"
         android:hint="@string/phone_number"
-        android:inputType="phone"
+        android:inputType="number|phone"
         android:textSize="@dimen/standard_text_size"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

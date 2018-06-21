@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.travijuu.numberpicker.library.NumberPicker;
-
 import java.util.List;
 
 import ir.charnal.davod.a4nalfinal.R;
@@ -71,7 +69,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<ShoppingCartAdapte
             colorShoppingCart = itemView.findViewById(R.id.text_view_second_column_color_shopping_cart);
             sizeShoppingCart = itemView.findViewById(R.id.text_view_second_column_color_shopping_cart);
             priceOneShoppingCart = itemView.findViewById(R.id.text_view_second_column_price_one_shopping_cart);
-            priceAllShoppingCart = itemView.findViewById(R.id.text_view_second_column_price_all_shopping_cart);
+            priceAllShoppingCart = itemView.findViewById(R.id.text_view_second_column_price_number_shopping_cart);
 //            numberShoppingCart = itemView.findViewById(R.id.num_pick_number_shopping_cart);
             imageShoppingCart = itemView.findViewById(R.id.image_view_product_shopping_cart);
 
