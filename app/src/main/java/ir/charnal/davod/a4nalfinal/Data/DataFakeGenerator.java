@@ -1,4 +1,4 @@
-package ir.charnal.davod.a4nalfinal.DataFakeGenerator;
+package ir.charnal.davod.a4nalfinal.Data;
 
 import android.content.Context;
 import android.support.v4.content.res.ResourcesCompat;
@@ -12,9 +12,13 @@ import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopMainPage;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelListShoppingCart;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNotice;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelNoticeCategory;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelProducts;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelProductShopMainPage;
 
 public class DataFakeGenerator {
+
+    private static List<DataModelProducts> products;
+
 
     public static List<DataModelNotice> getFakeData(Context context){
         List<DataModelNotice> models = new ArrayList<>();
@@ -91,6 +95,32 @@ public class DataFakeGenerator {
         }
         return categoriesShopMainPage;
     }
+
+//    public static List<DataModelProducts> getFromServer(Context context){
+//
+//
+//        APIService service = APIClient.getClient().create(APIService.class);
+//        Call<List<DataModelProducts>> call = service.getObjectOfProducts();
+//        Log.i("TAG", "onCreate: OK");
+//
+//        call.enqueue(new Callback<List<DataModelProducts>>() {
+//            @Override
+//            public void onResponse(Call<List<DataModelProducts>> call, Response<List<DataModelProducts>> response) {
+//                products = response.body();
+//                Log.i("TAG", "onResponse: " + products.get(0).getId());
+//                for (int i = 0; i < products.size(); i++) {
+//
+//                    Log.i("TAG", "onResponse: " + products.get(i).getId());
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<DataModelProducts>> call, Throwable t) {
+//                Log.e("TAG", "onFailure: FAIL");
+//            }
+//        });
+//        return products;
+//    }
 
     public static List<DataModelProductShopMainPage> getProductShopDataMainPage(Context context) {
         List<DataModelProductShopMainPage> productsListShopMainPage = new ArrayList<>();

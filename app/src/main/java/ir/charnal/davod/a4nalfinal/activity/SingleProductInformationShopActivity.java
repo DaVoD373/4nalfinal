@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
@@ -21,6 +20,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SingleProductInformationShopActivity extends AppCompatActivity {
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -43,7 +43,11 @@ public class SingleProductInformationShopActivity extends AppCompatActivity {
         setupViews();
 
 
+
+
     }
+
+
 
     private void listeners() {
         ConstraintLayout constraintLayout = findViewById(R.id.constraint_add_shopping_cart);

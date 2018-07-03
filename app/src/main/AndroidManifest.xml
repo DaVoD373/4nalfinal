@@ -33,7 +33,8 @@
         <activity
             android:name=".activity.FinalizeShoppingActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
-        <activity android:name=".activity.BankCardInformationActivity"></activity>
+        <activity android:name=".activity.BankCardInformationActivity" />
+        <activity android:name=".activity.AllProductsActivity"></activity>
     </application>
 
 </manifest>

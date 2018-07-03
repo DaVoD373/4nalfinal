@@ -14,18 +14,19 @@ import java.util.List;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopMainPage;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelCategoriseOfProducts;
 
 public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategoryShopMainPageAdapter.CategoryShopMainPageViewHolder> {
 
 
     private final Context context;
-    private final List<DataModelCategoryShopMainPage> categoriesShopMainPage;
+    private final List<DataModelCategoriseOfProducts> categories;
     public static final String RECYCLER_POSITION = "recycler_position";
 
-    public CategoryShopMainPageAdapter (Context context, List<DataModelCategoryShopMainPage> categoriesShopMainPage){
+    public CategoryShopMainPageAdapter (Context context, List<DataModelCategoriseOfProducts> categories){
 
         this.context = context;
-        this.categoriesShopMainPage = categoriesShopMainPage;
+        this.categories = categories;
     }
     @NonNull
     @Override
@@ -36,8 +37,8 @@ public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategorySh
 
     @Override
     public void onBindViewHolder(@NonNull CategoryShopMainPageViewHolder holder, final int position) {
-        DataModelCategoryShopMainPage categoryShopMainPage = categoriesShopMainPage.get(position);
-        holder.textViewCategoryShopMainPage.setText(categoryShopMainPage.getProductName());
+        DataModelCategoriseOfProducts categoriesOfProducts = categories.get(position);
+        holder.textViewCategoryShopMainPage.setText(categoriesOfProducts.getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +54,7 @@ public class CategoryShopMainPageAdapter extends RecyclerView.Adapter<CategorySh
 
     @Override
     public int getItemCount() {
-        return categoriesShopMainPage.size();
+        return categories.size();
     }
 
     public class CategoryShopMainPageViewHolder extends RecyclerView.ViewHolder {

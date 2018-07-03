@@ -21,7 +21,7 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
-import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
+import ir.charnal.davod.a4nalfinal.Data.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.activity.AddNewNoticeActivity;
 import ir.charnal.davod.a4nalfinal.activity.SingleProductInformationShopActivity;
@@ -140,9 +140,10 @@ public class NoticeFragment extends Fragment {
     @SuppressLint("RestrictedApi")
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_notice, menu);
+        menu.removeItem(R.id.ordering);
         super.onCreateOptionsMenu(menu, inflater);
 
-        inflater.inflate(R.menu.menu_notice, menu);
 
         //for visibility menu icons
 //        if (menu instanceof MenuBuilder) {

@@ -13,7 +13,11 @@
         android:title="@string/filter"
         android:icon="@drawable/ic_filter"
         app:showAsAction="always"/>
-
+    <item
+        android:id="@+id/ordering"
+        android:title="@string/ordering"
+        android:icon="@drawable/vc_grid_on_white"
+        app:showAsAction="always"/>
 
 
 

@@ -3,15 +3,21 @@ package ir.charnal.davod.a4nalfinal.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
+import java.util.List;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelCategoriseOfProducts;
 import ir.charnal.davod.a4nalfinal.fragment.CategoryShopListFragment;
 
 
 public class CategoryShopListViewPagerAdapter extends FragmentPagerAdapter {
 
 
-    public CategoryShopListViewPagerAdapter(FragmentManager fm) {
+
+    private List<DataModelCategoriseOfProducts> limit_category;
+
+
+    public CategoryShopListViewPagerAdapter(FragmentManager fm,List<DataModelCategoriseOfProducts> limit_category) {
         super(fm);
+        this.limit_category = limit_category;
     }
 
 
@@ -25,29 +31,28 @@ public class CategoryShopListViewPagerAdapter extends FragmentPagerAdapter {
         return 8;
     }
 
-    public CharSequence getPageTitle(int position) {
+    public CharSequence getPageTitle( int position) {
 
-//         this tabs is reverse. so I should write the tab number inverted.
-        switch (position){
-            case 0:
-                return "کالای دیجیتال";
-            case 1:
-                return "مد و پوشاک";
-            case 2:
-                return "خانه، آشپزخانه و ابزار";
-            case 3:
-                return "آرایشی و بهداشتی";
-            case 4:
-                return "کتاب، فرهنگ و هنر";
-            case 5:
-                return "ورزش و سفر";
-            case 6:
-                return "مادر و کودک";
-            case 7:
-                return "وسایل نقلیه و صنعتی";
-            default:
-                return "";
-        }
-//        return "";
+              switch (position) {
+                case 0:
+                    return limit_category.get(position).getName();
+                case 1:
+                    return limit_category.get(position).getName();
+                case 2:
+                    return limit_category.get(position).getName();
+                case 3:
+                    return limit_category.get(position).getName();
+                case 4:
+                    return limit_category.get(position).getName();
+                case 5:
+                    return limit_category.get(position).getName();
+                case 6:
+                    return limit_category.get(position).getName();
+                default:
+                    return "";
+            }
+
     }
+
+
 }

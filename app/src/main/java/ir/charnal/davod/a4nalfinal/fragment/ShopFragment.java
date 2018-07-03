@@ -21,12 +21,15 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
-import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
+import ir.charnal.davod.a4nalfinal.Data.DataFromServer;
 import ir.charnal.davod.a4nalfinal.R;
+import ir.charnal.davod.a4nalfinal.activity.AllProductsActivity;
 import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.activity.ShoppingCartActivity;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopMainPageAdapter;
 import ir.charnal.davod.a4nalfinal.adapter.ProductShopMainPageAdapter;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelCategoriseOfProducts;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelProducts;
 import ss.com.bannerslider.banners.Banner;
 import ss.com.bannerslider.banners.DrawableBanner;
 import ss.com.bannerslider.views.BannerSlider;
@@ -36,9 +39,12 @@ public class ShopFragment extends Fragment {
     private BannerSlider bannerSlider;
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
-    Button btnSeeListMostPopular;
-    Button btnSeeListMostSales;
-    Button btnSeeListNewest;
+    private Button btnSeeListMostPopular;
+    private Button btnSeeListMostSales;
+    private Button btnSeeListNewest;
+    private ProductShopMainPageAdapter mostPopularProductShopMainPageAdapter, mostSalesProductShopMainPageAdapter, newestProductShopMainPageAdapter;
+    private RecyclerView recyclerViewCategoryShopMainPage, recyclerViewMostPopularProductShopMainPage, recyclerViewMostSalesProductShopMainPage, recyclerViewNewestProductShopMainPage;
+    private DataFromServer dataFromServer = new DataFromServer();
 
 
     @SuppressLint("ValidFragment")
@@ -54,7 +60,7 @@ public class ShopFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_shop,container,false);
+        View view = inflater.inflate(R.layout.layout_shop, container, false);
 
         return view;
     }
@@ -67,12 +73,35 @@ public class ShopFragment extends Fragment {
 
 
     }
-//Todo set listener for see full lists buttons.
+
+    //Todo set listener for see full lists buttons.
     private void listeners() {
-//        btnSeeListMostPopular = getView().findViewById(R.id.btn_see_full_list_most_popular);
-//        btnSeeListMostSales = getView().findViewById(R.id.btn_see_full_list_most_sales);
-//        btnSeeListNewest = getView().findViewById(R.id.btn_see_full_list_newest);
-//
+        btnSeeListMostPopular = getView().findViewById(R.id.btn_see_full_list_most_popular);
+        btnSeeListMostSales = getView().findViewById(R.id.btn_see_full_list_most_sales);
+        btnSeeListNewest = getView().findViewById(R.id.btn_see_full_list_newest);
+
+        btnSeeListMostPopular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllProductsActivity.class);
+                getContext().startActivity(intent);
+            }
+        });
+        btnSeeListMostSales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllProductsActivity.class);
+                getContext().startActivity(intent);
+            }
+        });
+        btnSeeListNewest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllProductsActivity.class);
+                getContext().startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -92,7 +121,7 @@ public class ShopFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.menu_shop, menu);
-        }
+    }
 
 
     @Override
@@ -100,6 +129,7 @@ public class ShopFragment extends Fragment {
         //Todo complete this method.
         listeners();
 
+        getDataFromServer();
 
 
         bannerSlider = view.findViewById(R.id.banner_slider_shop);
@@ -109,30 +139,11 @@ public class ShopFragment extends Fragment {
         banners.add(new DrawableBanner(R.drawable.ad_store_banner_2));
         bannerSlider.setBanners(banners);
 
-        //recycler category names
-        RecyclerView recyclerViewCategoryShopMainPage = view.findViewById(R.id.recycler_view_category_shop);
-        CategoryShopMainPageAdapter categoryShopMainPageAdapter = new CategoryShopMainPageAdapter(getActivity(),DataFakeGenerator.getCategoryShopDataMainPage(getActivity()));
-        recyclerViewCategoryShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-        recyclerViewCategoryShopMainPage.setAdapter(categoryShopMainPageAdapter);
 
-
-        //recycler most popular
-        RecyclerView recyclerViewMostPopularProductShopMainPage = view.findViewById(R.id.recycler_view_most_popular_shop_main_page);
-        ProductShopMainPageAdapter mostPopularProductShopMainPageAdapter = new ProductShopMainPageAdapter(getActivity(),DataFakeGenerator.getProductShopDataMainPage(getActivity()));
-        recyclerViewMostPopularProductShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-        recyclerViewMostPopularProductShopMainPage.setAdapter(mostPopularProductShopMainPageAdapter);
-
-        //recycler most sales
-        RecyclerView recyclerViewMostSalesProductShopMainPage = view.findViewById(R.id.recycler_view_most_sales_shop_main_page);
-        ProductShopMainPageAdapter mostSalesProductShopMainPageAdapter = new ProductShopMainPageAdapter(getActivity(),DataFakeGenerator.getProductShopDataMainPage(getActivity()));
-        recyclerViewMostSalesProductShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-        recyclerViewMostSalesProductShopMainPage.setAdapter(mostSalesProductShopMainPageAdapter);
-
-        //recycler newest
-        RecyclerView recyclerViewNewestProductShopMainPage = view.findViewById(R.id.recycler_view_newest_products_shop_main_page);
-        ProductShopMainPageAdapter newestProductShopMainPageAdapter = new ProductShopMainPageAdapter(getActivity(),DataFakeGenerator.getProductShopDataMainPage(getActivity()));
-        recyclerViewNewestProductShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-        recyclerViewNewestProductShopMainPage.setAdapter(newestProductShopMainPageAdapter);
+        recyclerViewMostPopularProductShopMainPage = view.findViewById(R.id.recycler_view_most_popular_shop_main_page);
+        recyclerViewMostSalesProductShopMainPage = view.findViewById(R.id.recycler_view_most_sales_shop_main_page);
+        recyclerViewNewestProductShopMainPage = view.findViewById(R.id.recycler_view_newest_products_shop_main_page);
+        recyclerViewCategoryShopMainPage = view.findViewById(R.id.recycler_view_category_shop);
 
 
 //        recyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(),DividerItemDecoration.VERTICAL));
@@ -143,9 +154,47 @@ public class ShopFragment extends Fragment {
     private void setupToolbar() {
 
 
-        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout,toolbar,0,0);
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, 0, 0);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
+    }
+
+    private void getDataFromServer() {
+
+
+        dataFromServer.getProductsFromServer(new DataFromServer.OnProductsReceived() {
+            @Override
+            public void onReceived(List<DataModelProducts> products) {
+                //recycler most popular
+                mostPopularProductShopMainPageAdapter = new ProductShopMainPageAdapter(getActivity(), products,ProductShopMainPageAdapter.MAIN_PAGE);
+                recyclerViewMostPopularProductShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+                recyclerViewMostPopularProductShopMainPage.setAdapter(mostPopularProductShopMainPageAdapter);
+
+                //recycler most sales
+                mostSalesProductShopMainPageAdapter = new ProductShopMainPageAdapter(getActivity(), products,ProductShopMainPageAdapter.MAIN_PAGE);
+                recyclerViewMostSalesProductShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+                recyclerViewMostSalesProductShopMainPage.setAdapter(mostSalesProductShopMainPageAdapter);
+
+                //recycler newest
+                newestProductShopMainPageAdapter = new ProductShopMainPageAdapter(getActivity(), products,ProductShopMainPageAdapter.MAIN_PAGE);
+                recyclerViewNewestProductShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+                recyclerViewNewestProductShopMainPage.setAdapter(newestProductShopMainPageAdapter);
+            }
+
+        },"","");
+
+
+        dataFromServer.getCategoriesFromServer(new DataFromServer.OnCategoriesReceived() {
+            @Override
+            public void onReceived(List<DataModelCategoriseOfProducts> limit_category) {
+                //recycler category names
+                CategoryShopMainPageAdapter categoryShopMainPageAdapter = new CategoryShopMainPageAdapter(getActivity(), limit_category);
+                recyclerViewCategoryShopMainPage.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+                recyclerViewCategoryShopMainPage.setAdapter(categoryShopMainPageAdapter);
+            }
+        },"parent","0");
+
+
     }
 
 

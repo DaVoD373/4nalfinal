@@ -15,6 +15,7 @@ import java.util.List;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.activity.CategoryListShopActivity;
 import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopListFragments;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelCategoriseOfProducts;
 
 /**
  * Created by Sajjad on 6/2/2018.
@@ -23,13 +24,13 @@ import ir.charnal.davod.a4nalfinal.datamodel.DataModelCategoryShopListFragments;
 public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopListAdapter.CategoryShopListViewHolder> {
 
     private Context context;
-    private List<DataModelCategoryShopListFragments> categoriesShopListFragment;
+    private List<DataModelCategoriseOfProducts> categorise;
     public static final String ID_OF_ADAPTER="id_of_adapter";
 
-    public CategoryShopListAdapter(Context context, List<DataModelCategoryShopListFragments> categoriesShopListFragment){
+    public CategoryShopListAdapter(Context context, List<DataModelCategoriseOfProducts> categorise){
 
         this.context = context;
-        this.categoriesShopListFragment = categoriesShopListFragment;
+        this.categorise = categorise;
     }
 
 
@@ -42,9 +43,8 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
 
     @Override
     public void onBindViewHolder(@NonNull CategoryShopListViewHolder holder, int position) {
-        DataModelCategoryShopListFragments categoryShopFragment = categoriesShopListFragment.get(position);
-        holder.categoryShopListImage.setImageDrawable(categoryShopFragment.getCategoryImage());
-        holder.CategoryShopListName.setText(categoryShopFragment.getCategoryName());
+        DataModelCategoriseOfProducts category = categorise.get(position);
+        holder.CategoryShopListName.setText(category.getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class CategoryShopListAdapter extends RecyclerView.Adapter<CategoryShopLi
 
     @Override
     public int getItemCount() {
-        return categoriesShopListFragment.size();
+        return categorise.size();
     }
 
 

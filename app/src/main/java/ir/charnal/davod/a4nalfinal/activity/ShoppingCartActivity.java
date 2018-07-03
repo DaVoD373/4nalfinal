@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.travijuu.numberpicker.library.NumberPicker;
 
-import ir.charnal.davod.a4nalfinal.DataFakeGenerator.DataFakeGenerator;
+import ir.charnal.davod.a4nalfinal.Data.DataFakeGenerator;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.ShoppingCartAdapter;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;

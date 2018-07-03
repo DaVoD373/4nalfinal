@@ -13,15 +13,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.List;
+
+import ir.charnal.davod.a4nalfinal.Data.DataFromServer;
 import ir.charnal.davod.a4nalfinal.R;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopListAdapter;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopListViewPagerAdapter;
 import ir.charnal.davod.a4nalfinal.adapter.CategoryShopMainPageAdapter;
+import ir.charnal.davod.a4nalfinal.datamodel.dataModelShop.DataModelCategoriseOfProducts;
 import ir.charnal.davod.a4nalfinal.fragment.CategoryShopListFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CategoryListShopActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +36,11 @@ public class CategoryListShopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category_list_shop);
 
         Intent intent = getIntent();
-        int recyclerPosition = intent.getIntExtra(CategoryShopMainPageAdapter.RECYCLER_POSITION, 0);
+        final int recyclerPosition = intent.getIntExtra(CategoryShopMainPageAdapter.RECYCLER_POSITION, 0);
         int idOfAdapter = intent.getIntExtra(CategoryShopListAdapter.ID_OF_ADAPTER, 0);
 
-        TabLayout categoryShopListTabLayout = findViewById(R.id.category_shop_list_tab_layout);
-        ViewPager categoryShopListViewPager = findViewById(R.id.category_shop_list_view_pager);
+        final TabLayout categoryShopListTabLayout = findViewById(R.id.category_shop_list_tab_layout);
+        final ViewPager categoryShopListViewPager = findViewById(R.id.category_shop_list_view_pager);
 
         if (idOfAdapter == 1) {
 
@@ -47,12 +53,22 @@ public class CategoryListShopActivity extends AppCompatActivity {
         } else {
 
 
-            CategoryShopListViewPagerAdapter categoryListViewPagerAdapter = new CategoryShopListViewPagerAdapter(getSupportFragmentManager());
-            categoryShopListViewPager.setAdapter(categoryListViewPagerAdapter);
-            categoryShopListTabLayout.setupWithViewPager(categoryShopListViewPager);
-            //gozashtam dame dast bashe
+            DataFromServer dataFromServer = new DataFromServer();
+
+            dataFromServer.getCategoriesFromServer(new DataFromServer.OnCategoriesReceived() {
+                @Override
+                public void onReceived(List<DataModelCategoriseOfProducts> limit_category) {
+                    CategoryShopListViewPagerAdapter categoryListViewPagerAdapter = new CategoryShopListViewPagerAdapter(getSupportFragmentManager(),limit_category);
+                    categoryShopListViewPager.setAdapter(categoryListViewPagerAdapter);
+                    categoryShopListTabLayout.setupWithViewPager(categoryShopListViewPager);
+                    //gozashtam dame dast bashe
 //            categoryShopListViewPager.setCurrentItem(9);
-            categoryShopListViewPager.setCurrentItem(recyclerPosition);
+                    categoryShopListViewPager.setCurrentItem(recyclerPosition);
+
+                }
+            },"parent","0");
+
+
 
         }
 

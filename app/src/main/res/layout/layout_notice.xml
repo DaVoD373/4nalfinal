@@ -122,6 +122,7 @@
         tools:ignore="VectorDrawableCompat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:focusable="true" />
+        android:focusable="true"
+      />
 
 </android.support.design.widget.CoordinatorLayout>
